@@ -3,6 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 import datetime
 from db_config import db, init_db
+from customer_service.customer_app import Customer
+from inventory_service.inventory_app import Product
+
 
 app = Flask(__name__)
 init_db(app)
@@ -14,19 +17,20 @@ class Review(db.Model):
     rating = db.Column(db.Integer, nullable=False)
     comment = db.Column(db.Text, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    is_moderated = db.Column(db.Boolean, default=False)
+    is_flagged = db.Column(db.Boolean, default=False)
 
     def as_dict(self):
         return {
-            "id": self.id,
+            "review_id": self.id,
             "username": self.username,
             "product_name": self.product_name,
             "rating": self.rating,
             "comment": self.comment,
             "created_at": self.created_at,
-            "is_moderated": self.is_moderated,
+            "is_flagged": self.is_flagged
         }
 
+# only authenticated customers
 @app.route('/reviews', methods=['POST'])
 def submit_review():
     try:
@@ -45,6 +49,7 @@ def submit_review():
     except IntegrityError:
         return jsonify({"error": "Database error"}), 500
 
+# authenticated customers
 @app.route('/reviews/<int:review_id>', methods=['PUT'])
 def update_review(review_id):
     review = Review.query.get_or_404(review_id)
@@ -54,6 +59,7 @@ def update_review(review_id):
     db.session.commit()
     return jsonify({"message": "Review updated successfully", "review": review.as_dict()})
 
+#authenticated customers
 @app.route('/reviews/<int:review_id>', methods=['DELETE'])
 def delete_review(review_id):
     review = Review.query.get_or_404(review_id)
@@ -61,27 +67,31 @@ def delete_review(review_id):
     db.session.commit()
     return jsonify({"message": "Review deleted successfully"})
 
+#anyone 
 @app.route('/reviews/product/<string:product_name>', methods=['GET'])
 def get_product_reviews(product_name):
-    reviews = Review.query.filter_by(product_name=product_name).all()
+    reviews = Review.query.filter_by(product_name=product_name, is_flagged= False).all()
     return jsonify([review.as_dict() for review in reviews])
 
+#admin
 @app.route('/reviews/customer/<string:username>', methods=['GET'])
 def get_customer_reviews(username):
     reviews = Review.query.filter_by(username=username).all()
     return jsonify([review.as_dict() for review in reviews])
 
+#admin
 @app.route('/reviews/<int:review_id>', methods=['GET'])
 def get_review_details(review_id):
     review = Review.query.get_or_404(review_id)
     return jsonify(review.as_dict())
 
-@app.route('/reviews/<int:review_id>/moderate', methods=['PUT'])
-def moderate_review(review_id):
+
+@app.route('/reviews/flag/<int:review_id>', methods=['PUT'])
+def flag_review(review_id):
     review = Review.query.get_or_404(review_id)
-    review.is_moderated = True
+    review.is_flagged = True
     db.session.commit()
-    return jsonify({"message": "Review moderated successfully", "review": review.as_dict()})
+    return jsonify({"message": "Review flagged successfully", "review": review.as_dict()})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5004)
+    app.run(port=7000)
