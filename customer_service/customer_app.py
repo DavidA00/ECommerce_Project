@@ -10,44 +10,12 @@ class User(db.Model):
     full_name = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(50), primary_key=True, nullable=False)
     password = db.Column(db.String(100), nullable=False) 
-    isadmin = db.Column(db.Boolean, default = 0)
+    isadmin = db.Column(db.Boolean, default = False)
     age = db.Column(db.Integer, nullable=False)
     address = db.Column(db.String(200), nullable=False)
     gender = db.Column(db.String(10), nullable=False)
     marital_status = db.Column(db.String(10), nullable=False)
     wallet_balance = db.Column(db.Float, default=0.0)
-
-
-@app.route('/admin/new', methods=['POST'])
-def register_admin():
-    data = request.get_json()
-    required_fields = ['full_name', 'username', 'password', 'age', 'address', 'gender', 'marital_status']
-    if not all(field in data for field in required_fields):
-        return jsonify({'error': 'Missing required fields'}), 400
-
-    if User.query.filter_by(username=data['username']).first():
-        return jsonify({'error': 'Username already taken'}), 400
-
-    if len(data['password']) < 8 or not any(char.isdigit() for char in data['password']):
-        logger.warning("Registration failed: Weak password.")
-        return jsonify({'error': 'Password must be at least 8 characters long and contain a number.'}), 400
-
-    hashed_password = generate_password_hash(data['password'], method='bcrypt')
-
-    new_admin = User(
-        full_name=data['full_name'],
-        username=data['username'],
-        password=hashed_password,
-        age=data['age'],
-        address=data['address'],
-        gender=data['gender'],
-        marital_status=data['marital_status'],
-        isadmin = 1,
-    )
-    db.session.add(new_admin)
-    db.session.commit()
-    return jsonify({'message': 'Admin registered successfully'}), 201
-
 
 
 @app.route('/customers/new', methods=['POST'])
