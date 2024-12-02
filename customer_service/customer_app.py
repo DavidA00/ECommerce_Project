@@ -1,43 +1,45 @@
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
+from db_config import db, init_db
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///customers.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+init_db(app)
+app.config['SECRET_KEY'] = "222222222233333333"
 
-db = SQLAlchemy(app)
-
-# Define the Customer model
-class Customer(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+class User(db.Model):
+    __tablename__ = 'User'
     full_name = db.Column(db.String(100), nullable=False)
-    username = db.Column(db.String(50), unique=True, nullable=False)
-    password = db.Column(db.String(100), nullable=False)  # Passwords should be hashed in production
+    username = db.Column(db.String(50), primary_key=True, nullable=False)
+    password = db.Column(db.String(100), nullable=False) 
+    isadmin = db.Column(db.Boolean, default = False)
     age = db.Column(db.Integer, nullable=False)
     address = db.Column(db.String(200), nullable=False)
     gender = db.Column(db.String(10), nullable=False)
     marital_status = db.Column(db.String(10), nullable=False)
     wallet_balance = db.Column(db.Float, default=0.0)
 
-# Create the database tables before the first request
-@app.before_first_request
-def create_tables():
-    db.create_all()
 
-@app.route('/customers', methods=['POST'])
+@app.route('/customers/new', methods=['POST'])
 def register_customer():
+
     data = request.get_json()
     required_fields = ['full_name', 'username', 'password', 'age', 'address', 'gender', 'marital_status']
     if not all(field in data for field in required_fields):
         return jsonify({'error': 'Missing required fields'}), 400
 
-    if Customer.query.filter_by(username=data['username']).first():
+    if User.query.filter_by(username=data['username']).first():
         return jsonify({'error': 'Username already taken'}), 400
 
-    new_customer = Customer(
+
+    if len(data['password']) < 8 or not any(char.isdigit() for char in data['password']):
+        logger.warning("Registration failed: Weak password.")
+        return jsonify({'error': 'Password must be at least 8 characters long and contain a number.'}), 400
+
+    hashed_password = generate_password_hash(data['password'], method='bcrypt')
+
+    new_customer = User(
         full_name=data['full_name'],
         username=data['username'],
-        password=data['password'],  # Hash the password in a real application
+        password=hashed_password,
         age=data['age'],
         address=data['address'],
         gender=data['gender'],
@@ -47,9 +49,10 @@ def register_customer():
     db.session.commit()
     return jsonify({'message': 'Customer registered successfully'}), 201
 
+
 @app.route('/customers/<string:username>', methods=['DELETE'])
 def delete_customer(username):
-    customer = Customer.query.filter_by(username=username).first()
+    customer = User.query.filter_by(username=username).first()
     if not customer:
         return jsonify({'error': 'Customer not found'}), 404
     db.session.delete(customer)
@@ -58,13 +61,15 @@ def delete_customer(username):
 
 @app.route('/customers/<string:username>', methods=['PUT'])
 def update_customer(username):
-    customer = Customer.query.filter_by(username=username).first()
+    customer = User.query.filter_by(username=username).first()
     if not customer:
         return jsonify({'error': 'Customer not found'}), 404
 
     data = request.get_json()
     for field in ['full_name', 'password', 'age', 'address', 'gender', 'marital_status']:
         if field in data:
+            if field == 'password':  
+                data[field] = generate_password_hash(data[field], method='bcrypt')
             setattr(customer, field, data[field])
 
     db.session.commit()
@@ -72,7 +77,7 @@ def update_customer(username):
 
 @app.route('/customers', methods=['GET'])
 def get_all_customers():
-    customers = Customer.query.all()
+    customers = User.query.all()
     output = []
     for customer in customers:
         customer_data = {
@@ -89,7 +94,7 @@ def get_all_customers():
 
 @app.route('/customers/<string:username>', methods=['GET'])
 def get_customer(username):
-    customer = Customer.query.filter_by(username=username).first()
+    customer = User.query.filter_by(username=username).first()
     if not customer:
         return jsonify({'error': 'Customer not found'}), 404
     customer_data = {
@@ -105,7 +110,7 @@ def get_customer(username):
 
 @app.route('/customers/<string:username>/charge', methods=['POST'])
 def charge_customer(username):
-    customer = Customer.query.filter_by(username=username).first()
+    customer = User.query.filter_by(username=username).first()
     if not customer:
         return jsonify({'error': 'Customer not found'}), 404
 
@@ -126,7 +131,7 @@ def charge_customer(username):
 
 @app.route('/customers/<string:username>/deduct', methods=['POST'])
 def deduct_from_customer(username):
-    customer = Customer.query.filter_by(username=username).first()
+    customer = User.query.filter_by(username=username).first()
     if not customer:
         return jsonify({'error': 'Customer not found'}), 404
 
@@ -147,5 +152,7 @@ def deduct_from_customer(username):
         'wallet_balance': customer.wallet_balance
     }), 200
 
+
+
 if __name__ == '__main__':
-    app.run(port=4001)
+    app.run(port=4000)
