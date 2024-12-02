@@ -4,6 +4,8 @@ from db_config import db, init_db
 
 app = Flask(__name__)
 init_db(app)
+app.config['SECRET_KEY'] = "222222222233333333"
+
 
 class Product(db.Model):
     __tablename__ = 'Product'

@@ -2,15 +2,17 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 from db_config import db, init_db
-from customer_service.customer_app import Customer
+from customer_service.customer_app import User
 from inventory_service.inventory_app import Product
 
 app = Flask(__name__)
 init_db(app)
+app.config['SECRET_KEY'] = "222222222233333333"
+
 
 class Sale(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), db.ForeignKey('customer.username'), nullable=False)
+    username = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
     product_name = db.Column(db.Integer, db.ForeignKey('product.name'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     total_price = db.Column(db.Float, nullable=False)
@@ -26,7 +28,7 @@ def make_sale():
     if not username or not product_name or quantity <= 0:
         return jsonify({"error": "Invalid input. Provide username, product_name, and valid quantity."}), 400
 
-    customer = Customer.query.get(username)
+    customer = User.query.get(username)
     product = Product.query.filter_by(name=product_name).first()
 
     if not customer:

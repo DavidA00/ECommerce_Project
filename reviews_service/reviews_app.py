@@ -3,16 +3,30 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 import datetime
 from db_config import db, init_db
-from customer_service.customer_app import Customer
+from customer_service.customer_app import User
 from inventory_service.inventory_app import Product
 
 
 app = Flask(__name__)
 init_db(app)
+app.config['SECRET_KEY'] = "222222222233333333"
+
+class User(db.Model):
+    __tablename__ = 'User'
+    full_name = db.Column(db.String(100), nullable=False)
+    username = db.Column(db.String(50), primary_key=True, nullable=False)
+    password = db.Column(db.String(100), nullable=False) 
+    isadmin = db.Column(db.Boolean, default = 0)
+    age = db.Column(db.Integer, nullable=False)
+    address = db.Column(db.String(200), nullable=False)
+    gender = db.Column(db.String(10), nullable=False)
+    marital_status = db.Column(db.String(10), nullable=False)
+    wallet_balance = db.Column(db.Float, default=0.0)
+
 
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), db.ForeignKey('customer.username'), nullable=False)
+    username = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
     product_name = db.Column(db.String(120), nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     comment = db.Column(db.Text, nullable=False)
@@ -29,6 +43,9 @@ class Review(db.Model):
             "created_at": self.created_at,
             "is_flagged": self.is_flagged
         }
+
+
+
 
 # only authenticated customers
 @app.route('/reviews', methods=['POST'])
