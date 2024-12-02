@@ -6,6 +6,8 @@ from db_config import db, init_db
 from customer_service.customer_app import User
 from inventory_service.inventory_app import Product
 from sqlalchemy.exc import IntegrityError
+from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 
 
@@ -17,7 +19,7 @@ jwt = JWTManager(app)
 
 class Review(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
+    username = db.Column(db.String(80), db.ForeignKey('User.username'), nullable=False)
     product_name = db.Column(db.String(120), nullable=False)
     rating = db.Column(db.Integer, nullable=False)
     comment = db.Column(db.Text, nullable=False)
@@ -38,13 +40,14 @@ class Review(db.Model):
 
 
 def admin_required(fn):
+    @wraps(fn)
     @jwt_required()
-    def wrapper(*args, **kwargs):
+    def wrapper(args, **kwargs):
         username = get_jwt_identity()
         user = User.query.filter_by(username=username).first()
         if not user or not user.isadmin:
             return jsonify({"error": "Admins only!"}), 403
-        return fn(*args, **kwargs)
+        return fn(args, **kwargs)
     return wrapper
 
 
@@ -55,7 +58,7 @@ def login():
     password = data.get('password')
 
     user = User.query.filter_by(username=username).first()
-    inputed_password_hash= generate_password_hash(password, method='bcrypt') 
+    inputed_password_hash= generate_password_hash(password) 
     if not user or (inputed_password_hash!= user.password):
         return jsonify({"error": "Invalid username or password"}), 401
 
@@ -85,7 +88,7 @@ def submit_review():
         return jsonify({"error": "Database error"}), 500
 
 
-@app.route('/reviews/<int:review_id>', methods=['PUT'])
+@app.route('/reviews/update/<int:review_id>', methods=['PUT'])
 @jwt_required()
 def update_review(review_id):
     username = get_jwt_identity()
@@ -100,7 +103,7 @@ def update_review(review_id):
     return jsonify({"message": "Review updated successfully", "review": review.as_dict()})
 
 
-@app.route('/reviews/<int:review_id>', methods=['DELETE'])
+@app.route('/reviews/delete/<int:review_id>', methods=['DELETE'])
 @jwt_required()
 def delete_review(review_id):
     username = get_jwt_identity()
@@ -125,7 +128,7 @@ def get_customer_reviews(username):
     return jsonify([review.as_dict() for review in reviews])
 
 
-@app.route('/reviews/<int:review_id>', methods=['GET'])
+@app.route('/reviews/details/<int:review_id>', methods=['GET'])
 @admin_required
 def get_review_details(review_id):
     review = Review.query.get_or_404(review_id)

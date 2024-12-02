@@ -12,8 +12,8 @@ app.config['SECRET_KEY'] = "222222222233333333"
 
 class Sale(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), db.ForeignKey('user.username'), nullable=False)
-    product_name = db.Column(db.Integer, db.ForeignKey('product.name'), nullable=False)
+    username = db.Column(db.String(80), db.ForeignKey('User.username'), nullable=False)
+    product_name = db.Column(db.Integer, db.ForeignKey('Product.name'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     total_price = db.Column(db.Float, nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)

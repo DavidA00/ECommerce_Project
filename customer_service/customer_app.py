@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from db_config import db, init_db
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 init_db(app)
@@ -31,10 +32,10 @@ def register_customer():
 
 
     if len(data['password']) < 8 or not any(char.isdigit() for char in data['password']):
-        logger.warning("Registration failed: Weak password.")
+        # logger.warning("Registration failed: Weak password.")
         return jsonify({'error': 'Password must be at least 8 characters long and contain a number.'}), 400
 
-    hashed_password = generate_password_hash(data['password'], method='bcrypt')
+    hashed_password = generate_password_hash(data['password'])
 
     new_customer = User(
         full_name=data['full_name'],
@@ -69,7 +70,7 @@ def update_customer(username):
     for field in ['full_name', 'password', 'age', 'address', 'gender', 'marital_status']:
         if field in data:
             if field == 'password':  
-                data[field] = generate_password_hash(data[field], method='bcrypt')
+                data[field] = generate_password_hash(data[field])
             setattr(customer, field, data[field])
 
     db.session.commit()
