@@ -42,12 +42,12 @@ class Review(db.Model):
 def admin_required(fn):
     @wraps(fn)
     @jwt_required()
-    def wrapper(args, **kwargs):
+    def wrapper(*args, **kwargs):
         username = get_jwt_identity()
         user = User.query.filter_by(username=username).first()
         if not user or not user.isadmin:
             return jsonify({"error": "Admins only!"}), 403
-        return fn(args, **kwargs)
+        return fn(*args, **kwargs)
     return wrapper
 
 
@@ -59,7 +59,8 @@ def login():
 
     user = User.query.filter_by(username=username).first()
     inputed_password_hash= generate_password_hash(password) 
-    if not user or (inputed_password_hash!= user.password):
+    # if not user or (inputed_password_hash!= user.password):
+    if not user or not check_password_hash(user.password, password):
         return jsonify({"error": "Invalid username or password"}), 401
 
     token = create_access_token(identity=username, additional_claims={"isadmin": user.isadmin})
