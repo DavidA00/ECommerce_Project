@@ -14,6 +14,38 @@ init_db(app)
 app.config['SECRET_KEY'] = "222222222233333333"
 jwt = JWTManager(app)
 
+
+logging.basicConfig(
+    filename='logs.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+def log_operation(endpoint, method, username=None, status=None, data=None):
+    """
+    Logs API operations to a file.
+
+    :param endpoint: The API endpoint accessed
+    :type endpoint: str
+    :param method: The HTTP method used
+    :type method: str
+    :param username: The username of the user performing the operation (optional)
+    :type username: str
+    :param status: The HTTP status code returned
+    :type status: int
+    :param data: Additional data to log (optional)
+    :type data: dict
+    """
+    log_entry = {
+        "endpoint": endpoint,
+        "method": method,
+        "username": username,
+        "status": status,
+        "data": data
+    }
+    logging.info(log_entry)
+
+
 class Review(db.Model):
     """
     Represents a review submitted by a customer for a product.
@@ -73,9 +105,13 @@ def admin_required(fn):
         username = get_jwt_identity()
         user = User.query.filter_by(username=username).first()
         if not user or not user.isadmin:
+            log_operation(request.path, request.method, username, 403)
             return jsonify({"error": "Admins only!"}), 403
         return fn(*args, **kwargs)
     return wrapper
+
+
+
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -90,10 +126,13 @@ def login():
     password = data.get('password')
 
     user = User.query.filter_by(username=username).first()
+
     if not user or not check_password_hash(user.password, password):
+        log_operation('/login', 'POST', username, 401)
         return jsonify({"error": "Invalid username or password"}), 401
 
     token = create_access_token(identity=username, additional_claims={"isadmin": user.isadmin})
+    log_operation('/login', 'POST', username, 200)
     return jsonify({"message": "Login successful", "token": token})
 
 @app.route('/reviews', methods=['POST'])
@@ -116,10 +155,13 @@ def submit_review():
         )
         db.session.add(review)
         db.session.commit()
+        log_operation('/reviews', 'POST', username, 201, data)
         return jsonify({"message": "Review submitted successfully", "review": review.as_dict()}), 201
     except KeyError as e:
+        log_operation('/reviews', 'POST', username, 400, {"error": f"Missing field: {e}"})
         return jsonify({"error": f"Missing field: {e}"}), 400
     except IntegrityError:
+        log_operation('/reviews', 'POST', username, 500)
         return jsonify({"error": "Database error"}), 500
 
 @app.route('/reviews/update/<int:review_id>', methods=['PUT'])
@@ -136,13 +178,17 @@ def update_review(review_id):
     username = get_jwt_identity()
     review = Review.query.get_or_404(review_id)
     if review.username != username:
+        log_operation(f'/reviews/update/{review_id}', 'PUT', username, 403)
         return jsonify({"error": "Unauthorized to update this review"}), 403
 
     data = request.json
     review.rating = data.get('rating', review.rating)
     review.comment = data.get('comment', review.comment)
     db.session.commit()
+    log_operation(f'/reviews/update/{review_id}', 'PUT', username, 200, data)
     return jsonify({"message": "Review updated successfully", "review": review.as_dict()})
+
+    
 
 @app.route('/reviews/delete/<int:review_id>', methods=['DELETE'])
 @jwt_required()
@@ -158,9 +204,12 @@ def delete_review(review_id):
     username = get_jwt_identity()
     review = Review.query.get_or_404(review_id)
     if review.username != username:
+        log_operation(f'/reviews/delete/{review_id}', 'DELETE', username, 403)
         return jsonify({"error": "Unauthorized to delete this review"}), 403
+
     db.session.delete(review)
     db.session.commit()
+    log_operation(f'/reviews/delete/{review_id}', 'DELETE', username, 200)
     return jsonify({"message": "Review deleted successfully"})
 
 @app.route('/reviews/product/<string:product_name>', methods=['GET'])
@@ -174,6 +223,8 @@ def get_product_reviews(product_name):
     :rtype: flask.Response
     """
     reviews = Review.query.filter_by(product_name=product_name, is_flagged=False).all()
+    log_operation(f'/reviews/product/{product_name}', 'GET', None, 200)
+
     return jsonify([review.as_dict() for review in reviews])
 
 @app.route('/reviews/customer/<string:username>', methods=['GET'])
@@ -188,6 +239,8 @@ def get_customer_reviews(username):
     :rtype: flask.Response
     """
     reviews = Review.query.filter_by(username=username).all()
+    log_operation(f'/reviews/customer/{username}', 'GET', get_jwt_identity(), 200)
+
     return jsonify([review.as_dict() for review in reviews])
 
 @app.route('/reviews/details/<int:review_id>', methods=['GET'])
@@ -202,6 +255,8 @@ def get_review_details(review_id):
     :rtype: flask.Response
     """
     review = Review.query.get_or_404(review_id)
+    log_operation(f'/reviews/details/{review_id}', 'GET', get_jwt_identity(), 200)
+
     return jsonify(review.as_dict())
 
 @app.route('/reviews/flag/<int:review_id>', methods=['PUT'])
@@ -218,6 +273,7 @@ def flag_review(review_id):
     review = Review.query.get_or_404(review_id)
     review.is_flagged = True
     db.session.commit()
+    log_operation(f'/reviews/flag/{review_id}', 'PUT', get_jwt_identity(), 200)
     return jsonify({"message": "Review flagged successfully", "review": review.as_dict()})
 
 if __name__ == '__main__':

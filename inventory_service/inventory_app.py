@@ -6,6 +6,39 @@ app = Flask(__name__)
 init_db(app)
 app.config['SECRET_KEY'] = "222222222233333333"
 
+
+# Configure logging
+logging.basicConfig(
+    filename='logs.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+def log_operation(endpoint, method, username=None, status=None, data=None):
+    """
+    Logs API operations to a file.
+
+    :param endpoint: The API endpoint accessed
+    :type endpoint: str
+    :param method: The HTTP method used
+    :type method: str
+    :param username: The username of the user performing the operation (optional)
+    :type username: str
+    :param status: The HTTP status code returned
+    :type status: int
+    :param data: Additional data to log (optional)
+    :type data: dict
+    """
+    log_entry = {
+        "endpoint": endpoint,
+        "method": method,
+        "username": username,
+        "status": status,
+        "data": data
+    }
+    logging.info(log_entry)
+
+
 class Product(db.Model):
     """
     Represents a product in the inventory system.
@@ -45,9 +78,11 @@ def add_product():
     data = request.get_json()
     required_fields = ['name', 'category', 'price']
     if not all(field in data for field in required_fields):
+        log_operation('/products/new', 'POST', None, 400, {"error": "Missing required fields"})
         return jsonify({'error': 'Missing required fields'}), 400
 
     if Product.query.filter_by(name=data['name']).first():
+        log_operation('/products/new', 'POST', None, 400, {"error": "Product name already exists"})
         return jsonify({'error': 'Product name already exists'}), 400
 
     new_product = Product(
@@ -59,7 +94,9 @@ def add_product():
     )
     db.session.add(new_product)
     db.session.commit()
+    log_operation('/products/new', 'POST', None, 201, {"message": "Product added successfully"})
     return jsonify({'message': 'Product added successfully'}), 201
+
 
 @app.route('/products/update/<string:name>', methods=['PUT'])
 def update_product(name):
@@ -73,6 +110,7 @@ def update_product(name):
     """
     product = Product.query.get(name)
     if not product:
+        log_operation(f'/products/update/{name}', 'PUT', None, 404, {"error": "Product not found"})
         return jsonify({'error': 'Product not found'}), 404
 
     data = request.get_json()
@@ -81,7 +119,9 @@ def update_product(name):
             setattr(product, field, data[field])
 
     db.session.commit()
+    log_operation(f'/products/update/{name}', 'PUT', None, 200, {"message": "Product updated successfully"})
     return jsonify({'message': 'Product updated successfully'}), 200
+
 
 @app.route('/products/<string:name>', methods=['DELETE'])
 def delete_product(name):
@@ -95,11 +135,14 @@ def delete_product(name):
     """
     product = Product.query.get(name)
     if not product:
+        log_operation(f'/products/{name}', 'DELETE', None, 404, {"error": "Product not found"})
         return jsonify({'error': 'Product not found'}), 404
 
     db.session.delete(product)
     db.session.commit()
+    log_operation(f'/products/{name}', 'DELETE', None, 200, {"message": "Product deleted successfully"})
     return jsonify({'message': 'Product deleted successfully'}), 200
+
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
@@ -122,6 +165,9 @@ def get_all_products():
             'updated_at': product.updated_at
         }
         output.append(prod_data)
+
+    log_operation('/products', 'GET', None, 200)
+
     return jsonify({'products': output}), 200
 
 @app.route('/products/<string:name>', methods=['GET'])
@@ -136,6 +182,7 @@ def get_product(name):
     """
     product = Product.query.get(name)
     if not product:
+        log_operation(f'/products/{name}', 'GET', None, 404, {"error": "Product not found"})
         return jsonify({'error': 'Product not found'}), 404
 
     prod_data = {
@@ -147,7 +194,9 @@ def get_product(name):
         'created_at': product.created_at,
         'updated_at': product.updated_at
     }
+    log_operation(f'/products/{name}', 'GET', None, 200)
     return jsonify({'product': prod_data}), 200
+
 
 @app.route('/products/stock/<string:name>', methods=['POST'])
 def deducting_stock(name):
@@ -161,14 +210,18 @@ def deducting_stock(name):
     """
     product = Product.query.get(name)
     if not product:
+        log_operation(f'/products/stock/{name}', 'POST', None, 404, {"error": "Product not found"})
         return jsonify({'error': 'Product not found'}), 404
 
     if product.stock <= 0:
+        log_operation(f'/products/stock/{name}', 'POST', None, 400, {"error": "Stock quantity cannot be negative"})
         return jsonify({'error': 'Stock quantity cannot be negative'}), 400
 
     product.stock -= 1
     db.session.commit()
+    log_operation(f'/products/stock/{name}', 'POST', None, 200, {"message": "Removed 1 item from Stock successfully"})
     return jsonify({'message': 'Removed 1 item from Stock successfully', 'stock': product.stock}), 200
+
 
 if __name__ == '__main__':
     app.run(port=5000)
