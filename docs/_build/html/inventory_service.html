@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inventory_service package &mdash; Ecommerce_DavidAbboud_MohamadKreidieh 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main module" href="main.html" />
+    <link rel="prev" title="initialize_db module" href="initialize_db.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ecommerce_DavidAbboud_MohamadKreidieh
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ECommerce_Project</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="customer_service.html">customer_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="db_config.html">db_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="initialize_db.html">initialize_db module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">inventory_service package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-inventory_service.inventory_app">inventory_service.inventory_app module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.Product"><code class="docutils literal notranslate"><span class="pre">Product</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.add_product"><code class="docutils literal notranslate"><span class="pre">add_product()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.deducting_stock"><code class="docutils literal notranslate"><span class="pre">deducting_stock()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.delete_product"><code class="docutils literal notranslate"><span class="pre">delete_product()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.get_all_products"><code class="docutils literal notranslate"><span class="pre">get_all_products()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.get_product"><code class="docutils literal notranslate"><span class="pre">get_product()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#inventory_service.inventory_app.update_product"><code class="docutils literal notranslate"><span class="pre">update_product()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-inventory_service">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviews_service.html">reviews_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales_service.html">sales_service package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ecommerce_DavidAbboud_MohamadKreidieh</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">ECommerce_Project</a></li>
+      <li class="breadcrumb-item active">inventory_service package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/inventory_service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="inventory-service-package">
+<h1>inventory_service package<a class="headerlink" href="#inventory-service-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-inventory_service.inventory_app">
+<span id="inventory-service-inventory-app-module"></span><h2>inventory_service.inventory_app module<a class="headerlink" href="#module-inventory_service.inventory_app" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#Product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.Product" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Represents a product in the inventory system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name of the product (primary key)</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Description of the product</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – Category of the product</p></li>
+<li><p><strong>price</strong> (<em>float</em>) – Price of the product</p></li>
+<li><p><strong>stock</strong> (<em>int</em>) – Stock quantity of the product (default: 0)</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – Timestamp of product creation (default: current UTC time)</p></li>
+<li><p><strong>updated_at</strong> (<em>datetime</em>) – Timestamp of last product update (default: current UTC time, auto-updates on modification)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.category" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.created_at">
+<span class="sig-name descname"><span class="pre">created_at</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.created_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.description" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.price">
+<span class="sig-name descname"><span class="pre">price</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.price" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.query">
+<span class="sig-name descname"><span class="pre">query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Query</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#inventory_service.inventory_app.Product.query" title="Link to this definition"></a></dt>
+<dd><p>A SQLAlchemy query for a model. Equivalent to <code class="docutils literal notranslate"><span class="pre">db.session.query(Model)</span></code>. Can be
+customized per-model by overriding <code class="xref py py-attr docutils literal notranslate"><span class="pre">query_class</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The query interface is considered legacy in SQLAlchemy. Prefer using
+<code class="docutils literal notranslate"><span class="pre">session.execute(select())</span></code> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.stock">
+<span class="sig-name descname"><span class="pre">stock</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.stock" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.Product.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#inventory_service.inventory_app.Product.updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.add_product">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">add_product</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#add_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.add_product" title="Link to this definition"></a></dt>
+<dd><p>Adds a new product to the inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.deducting_stock">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">deducting_stock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#deducting_stock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.deducting_stock" title="Link to this definition"></a></dt>
+<dd><p>Deducts 1 unit of stock for a specific product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the product</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message and updated stock quantity</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.delete_product">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">delete_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#delete_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.delete_product" title="Link to this definition"></a></dt>
+<dd><p>Deletes a product from the inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the product to delete</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.get_all_products">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">get_all_products</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#get_all_products"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.get_all_products" title="Link to this definition"></a></dt>
+<dd><p>Retrieves a list of all products in the inventory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON response with a list of products</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.get_product">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">get_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#get_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.get_product" title="Link to this definition"></a></dt>
+<dd><p>Retrieves the details of a specific product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the product to retrieve</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with product details or an error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="inventory_service.inventory_app.update_product">
+<span class="sig-prename descclassname"><span class="pre">inventory_service.inventory_app.</span></span><span class="sig-name descname"><span class="pre">update_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/inventory_service/inventory_app.html#update_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#inventory_service.inventory_app.update_product" title="Link to this definition"></a></dt>
+<dd><p>Updates the details of an existing product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the product to update</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-inventory_service">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-inventory_service" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="initialize_db.html" class="btn btn-neutral float-left" title="initialize_db module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="main.html" class="btn btn-neutral float-right" title="main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Abboud, Mohamad Kreidieh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

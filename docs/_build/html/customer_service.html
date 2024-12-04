@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>customer_service package &mdash; Ecommerce_DavidAbboud_MohamadKreidieh 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="db_config module" href="db_config.html" />
+    <link rel="prev" title="ECommerce_Project" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Ecommerce_DavidAbboud_MohamadKreidieh
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ECommerce_Project</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">customer_service package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-customer_service.customer_app">customer_service.customer_app module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.User"><code class="docutils literal notranslate"><span class="pre">User</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.charge_customer"><code class="docutils literal notranslate"><span class="pre">charge_customer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.deduct_from_customer"><code class="docutils literal notranslate"><span class="pre">deduct_from_customer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.delete_customer"><code class="docutils literal notranslate"><span class="pre">delete_customer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.get_all_customers"><code class="docutils literal notranslate"><span class="pre">get_all_customers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.get_customer"><code class="docutils literal notranslate"><span class="pre">get_customer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.register_customer"><code class="docutils literal notranslate"><span class="pre">register_customer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customer_service.customer_app.update_customer"><code class="docutils literal notranslate"><span class="pre">update_customer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-customer_service">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="db_config.html">db_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="initialize_db.html">initialize_db module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inventory_service.html">inventory_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviews_service.html">reviews_service package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sales_service.html">sales_service package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ecommerce_DavidAbboud_MohamadKreidieh</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">ECommerce_Project</a></li>
+      <li class="breadcrumb-item active">customer_service package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/customer_service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="customer-service-package">
+<h1>customer_service package<a class="headerlink" href="#customer-service-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-customer_service.customer_app">
+<span id="customer-service-customer-app-module"></span><h2>customer_service.customer_app module<a class="headerlink" href="#module-customer_service.customer_app" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="customer_service.customer_app.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.User" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Represents a user in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>full_name</strong> (<em>str</em>) – Full name of the user</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – Unique username (acts as primary key)</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Hashed password of the user</p></li>
+<li><p><strong>isadmin</strong> (<em>bool</em>) – Indicates whether the user is an administrator (default: False)</p></li>
+<li><p><strong>age</strong> (<em>int</em>) – Age of the user</p></li>
+<li><p><strong>address</strong> (<em>str</em>) – Address of the user</p></li>
+<li><p><strong>gender</strong> (<em>str</em>) – Gender of the user</p></li>
+<li><p><strong>marital_status</strong> (<em>str</em>) – Marital status of the user</p></li>
+<li><p><strong>wallet_balance</strong> (<em>float</em>) – Wallet balance of the user (default: 0.0)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.address">
+<span class="sig-name descname"><span class="pre">address</span></span><a class="headerlink" href="#customer_service.customer_app.User.address" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.age">
+<span class="sig-name descname"><span class="pre">age</span></span><a class="headerlink" href="#customer_service.customer_app.User.age" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.full_name">
+<span class="sig-name descname"><span class="pre">full_name</span></span><a class="headerlink" href="#customer_service.customer_app.User.full_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.gender">
+<span class="sig-name descname"><span class="pre">gender</span></span><a class="headerlink" href="#customer_service.customer_app.User.gender" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.isadmin">
+<span class="sig-name descname"><span class="pre">isadmin</span></span><a class="headerlink" href="#customer_service.customer_app.User.isadmin" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.marital_status">
+<span class="sig-name descname"><span class="pre">marital_status</span></span><a class="headerlink" href="#customer_service.customer_app.User.marital_status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.password">
+<span class="sig-name descname"><span class="pre">password</span></span><a class="headerlink" href="#customer_service.customer_app.User.password" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.query">
+<span class="sig-name descname"><span class="pre">query</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">t.ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Query</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#customer_service.customer_app.User.query" title="Link to this definition"></a></dt>
+<dd><p>A SQLAlchemy query for a model. Equivalent to <code class="docutils literal notranslate"><span class="pre">db.session.query(Model)</span></code>. Can be
+customized per-model by overriding <code class="xref py py-attr docutils literal notranslate"><span class="pre">query_class</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The query interface is considered legacy in SQLAlchemy. Prefer using
+<code class="docutils literal notranslate"><span class="pre">session.execute(select())</span></code> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.username">
+<span class="sig-name descname"><span class="pre">username</span></span><a class="headerlink" href="#customer_service.customer_app.User.username" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="customer_service.customer_app.User.wallet_balance">
+<span class="sig-name descname"><span class="pre">wallet_balance</span></span><a class="headerlink" href="#customer_service.customer_app.User.wallet_balance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.charge_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">charge_customer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#charge_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.charge_customer" title="Link to this definition"></a></dt>
+<dd><p>Charges a specified amount to the customer’s wallet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username of the customer</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.deduct_from_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">deduct_from_customer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#deduct_from_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.deduct_from_customer" title="Link to this definition"></a></dt>
+<dd><p>Deducts a specified amount from the customer’s wallet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username of the customer</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.delete_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">delete_customer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#delete_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.delete_customer" title="Link to this definition"></a></dt>
+<dd><p>Deletes a customer from the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username of the customer to delete</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.get_all_customers">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">get_all_customers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#get_all_customers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.get_all_customers" title="Link to this definition"></a></dt>
+<dd><p>Retrieves all customers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON response with a list of all customers</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.get_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">get_customer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#get_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.get_customer" title="Link to this definition"></a></dt>
+<dd><p>Retrieves details of a specific customer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username of the customer to retrieve</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with customer details or an error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.register_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">register_customer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#register_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.register_customer" title="Link to this definition"></a></dt>
+<dd><p>Registers a new customer in the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="customer_service.customer_app.update_customer">
+<span class="sig-prename descclassname"><span class="pre">customer_service.customer_app.</span></span><span class="sig-name descname"><span class="pre">update_customer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/customer_service/customer_app.html#update_customer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#customer_service.customer_app.update_customer" title="Link to this definition"></a></dt>
+<dd><p>Updates customer details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username of the customer to update</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>JSON response with a success or error message</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>flask.Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-customer_service">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-customer_service" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="ECommerce_Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="db_config.html" class="btn btn-neutral float-right" title="db_config module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Abboud, Mohamad Kreidieh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
