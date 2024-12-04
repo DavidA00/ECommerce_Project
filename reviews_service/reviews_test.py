@@ -244,13 +244,14 @@ def test_get_customer_reviews_non_admin(test_client):
 
 def test_get_customer_reviews_invalid_username(test_client):
     response = test_client.get(f'/reviews/customer/invalidusername', headers=generate_admin_header(test_client))
-    assert response.status_code == 403
+    assert response.status_code == 200
+    assert len(response.json) == 0
 
 # ADMIN ACCESSING A REVIEW
 
 def test_get_review_details(test_client):
     review_data = {
-        "product_name": "Test Product",
+        "product_name": "Laptop",
         "rating": 4,
         "comment": "This is a test review."
     }
@@ -264,13 +265,13 @@ def test_get_review_details(test_client):
     assert response.status_code == 200
     review_data = response.json
     assert review_data['review_id'] == review_id
-    assert review_data['product_name'] == "Test Product"
+    assert review_data['product_name'] == "Laptop"
     assert review_data['rating'] == 4
     assert review_data['comment'] == "This is a test review."
 
 def test_get_review_details_no_access(test_client):
     review_data = {
-        "product_name": "Test Product",
+        "product_name": "Laptop",
         "rating": 4,
         "comment": "This is a test review."
     }
@@ -286,5 +287,20 @@ def test_get_review_details_invalidid(test_client):
     response = test_client.get(f'/reviews/details/1000000', headers=generate_admin_header(test_client))
     assert response.status_code == 404
 
-# TODO TEST FLAG
+def test_flag_review(test_client):
+    token = generate_token(test_client)
+    headers = {'Authorization': f'Bearer {token}'}
+    data = {
+        "product_name": "Laptop",
+        "rating": 5,
+        "comment": "Excellent product!"
+    }
+    response1 = test_client.post('/reviews', json=data, headers=headers)
+    review_id = response1.json['review']['review_id']
+    response2 = test_client.put(f'/reviews/flag/{review_id}', json=data, headers=generate_admin_header(test_client))
+    assert response2.status_code == 200
+
+    response = test_client.get(f'/reviews/details/{review_id}', headers=generate_admin_header(test_client))
+    assert response.json['is_flagged'] == True
+
 

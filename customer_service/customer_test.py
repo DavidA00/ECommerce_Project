@@ -255,4 +255,47 @@ def test_deduct_customer_non_existent(test_client):
     assert response.status_code == 404
     data = response.get_json()
     assert data['error'] == "Customer not found"
+
+def test_deduct_customer_too_much(test_client):
+
+    test_client.post('/customers/new', json={
+        "full_name": "John Doe",
+        "username": "deducttoomuchjohndoe",
+        "password": "password123",
+        "age": 30,
+        "address": "123 Main St",
+        "gender": "Male",
+        "marital_status": "Single"
+    })
+    response1 = test_client.post('/customers/deducttoomuchjohndoe/charge', json={"amount": 100})
+    response2 = test_client.post('/customers/deducttoomuchjohndoe/deduct', json={"amount": 2000})
+    assert response2.status_code == 400
+    assert response2.json['error'] == 'Insufficient funds'
+
+    response = test_client.get('/customers/deducttoomuchjohndoe')
+    data = json.loads(response.get_data(as_text=True))
+    assert data['customer']['wallet_balance'] == 100
+
+def test_get_all_customers(test_client):
+    response1 = test_client.get('/customers')
+    assert response1.status_code == 200
+    original = len(response1.json['customers'])
+
+    customer = {
+        "full_name": "John Doe",
+        "username": "getalljohndoe",
+        "password": "password123",
+        "age": 30,
+        "address": "123 Main St",
+        "gender": "Male",
+        "marital_status": "Single"
+    }
+    response = test_client.post('/customers/new', json=customer)
+
+    response2 = test_client.get('/customers')
+    assert response2.status_code == 200
+    new = len(response2.json['customers'])
+
+    assert new == original + 1
+
 # TODO deduct customer too much money, get all customers

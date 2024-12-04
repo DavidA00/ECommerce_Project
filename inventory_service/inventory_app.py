@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from datetime import datetime
 from db_config import db, init_db
+import logging
 
 app = Flask(__name__)
 init_db(app)

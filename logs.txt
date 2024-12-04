@@ -1,0 +1,35 @@
+2024-12-04 05:32:08,265 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:6000
+2024-12-04 05:32:08,266 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-04 05:34:35,927 - INFO - 127.0.0.1 - - [04/Dec/2024 05:34:35] "[31m[1mGET /sales HTTP/1.1[0m" 405 -
+2024-12-04 05:34:47,823 - INFO - {'endpoint': '/sales', 'method': 'POST', 'username': 'salesuser', 'status': 201, 'data': {'message': 'Sale completed successfully.'}}
+2024-12-04 05:34:47,824 - INFO - 127.0.0.1 - - [04/Dec/2024 05:34:47] "[35m[1mPOST /sales HTTP/1.1[0m" 201 -
+2024-12-04 05:42:57,996 - INFO - 127.0.0.1 - - [04/Dec/2024 05:42:57] "[31m[1mPOST /sales/history/testuser HTTP/1.1[0m" 405 -
+2024-12-04 05:43:29,877 - INFO - {'endpoint': '/sales/history/testuser', 'method': 'GET', 'username': 'testuser', 'status': 404, 'data': {'error': 'No sales found.'}}
+2024-12-04 05:43:29,877 - INFO - 127.0.0.1 - - [04/Dec/2024 05:43:29] "[33mGET /sales/history/testuser HTTP/1.1[0m" 404 -
+2024-12-04 05:43:35,001 - INFO - {'endpoint': '/sales/history/salesuser', 'method': 'GET', 'username': 'salesuser', 'status': 200, 'data': None}
+2024-12-04 05:43:35,001 - INFO - 127.0.0.1 - - [04/Dec/2024 05:43:35] "GET /sales/history/salesuser HTTP/1.1" 200 -
+2024-12-04 05:44:23,803 - INFO - {'endpoint': '/sales/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-04 05:44:23,803 - INFO - 127.0.0.1 - - [04/Dec/2024 05:44:23] "GET /sales/products HTTP/1.1" 200 -
+2024-12-04 05:45:08,757 - INFO - {'endpoint': '/sales/history/salesuser', 'method': 'GET', 'username': 'salesuser', 'status': 200, 'data': None}
+2024-12-04 05:45:08,757 - INFO - 127.0.0.1 - - [04/Dec/2024 05:45:08] "GET /sales/history/salesuser HTTP/1.1" 200 -
+2024-12-04 05:45:40,326 - INFO - {'endpoint': '/sales/products/Laptop', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-04 05:45:40,326 - INFO - 127.0.0.1 - - [04/Dec/2024 05:45:40] "GET /sales/products/Laptop HTTP/1.1" 200 -
+2024-12-04 11:21:58,674 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-04 11:21:58,674 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-04 13:06:41,817 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-12-04 13:06:41,817 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-04 13:06:45,071 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'testuser', 'status': 401, 'data': None}
+2024-12-04 13:06:45,072 - INFO - 127.0.0.1 - - [04/Dec/2024 13:06:45] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-12-04 13:06:51,481 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'testuser', 'status': 200, 'data': None}
+2024-12-04 13:06:51,482 - INFO - 127.0.0.1 - - [04/Dec/2024 13:06:51] "POST /login HTTP/1.1" 200 -
+2024-12-04 13:15:59,961 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'unauthorized', 'status': 200, 'data': None}
+2024-12-04 13:15:59,961 - INFO - 127.0.0.1 - - [04/Dec/2024 13:15:59] "POST /login HTTP/1.1" 200 -
+2024-12-04 13:18:09,301 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'salesuser', 'status': 401, 'data': None}
+2024-12-04 13:18:09,302 - INFO - 127.0.0.1 - - [04/Dec/2024 13:18:09] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-12-04 13:18:12,598 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'salesuser', 'status': 200, 'data': None}
+2024-12-04 13:18:12,599 - INFO - 127.0.0.1 - - [04/Dec/2024 13:18:12] "POST /login HTTP/1.1" 200 -
+2024-12-04 13:19:52,535 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'nosales', 'status': 200, 'data': None}
+2024-12-04 13:19:52,536 - INFO - 127.0.0.1 - - [04/Dec/2024 13:19:52] "POST /login HTTP/1.1" 200 -

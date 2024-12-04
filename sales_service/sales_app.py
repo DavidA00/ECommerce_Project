@@ -4,6 +4,7 @@ import datetime
 from db_config import db, init_db
 from customer_service.customer_app import User
 from inventory_service.inventory_app import Product
+import logging
 
 app = Flask(__name__)
 init_db(app)

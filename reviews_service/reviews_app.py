@@ -8,7 +8,7 @@ from inventory_service.inventory_app import Product
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
-
+import logging
 app = Flask(__name__)
 init_db(app)
 app.config['SECRET_KEY'] = "222222222233333333"
@@ -123,6 +123,8 @@ def login():
     """
     data = request.json
     username = data.get('username')
+    if not 'password' in data:
+        return jsonify({"error": "Invalid username or password"}), 401
     password = data.get('password')
 
     user = User.query.filter_by(username=username).first()
@@ -147,6 +149,10 @@ def submit_review():
     username = get_jwt_identity()
     try:
         data = request.json
+        product = Product.query.filter_by(name=data['product_name']).first()
+        if not product:
+            log_operation('/reviews', 'POST', username, 401)
+            return jsonify({"error": "Product does not exist"}), 400
         review = Review(
             username=username,
             product_name=data['product_name'],
