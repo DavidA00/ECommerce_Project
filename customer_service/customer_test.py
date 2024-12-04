@@ -219,7 +219,7 @@ def test_deduct_customer(test_client):
     data = json.loads(response.get_data(as_text=True))
     assert data['customer']['wallet_balance'] == 50
 
-def test_charge_customer_negative(test_client):
+def test_deduct_customer_negative(test_client):
     test_client.post('/customers/new', json={
         "full_name": "John Doe",
         "username": "deductnegativejohndoe",
@@ -229,7 +229,8 @@ def test_charge_customer_negative(test_client):
         "gender": "Male",
         "marital_status": "Single"
     })
-    response = test_client.post('/customers/deductnegativejohndoe/charge', json={"amount": -100})
+    response1 = test_client.post('/customers/deductnegativejohndoe/charge', json={"amount": 100})
+    response = test_client.post('/customers/deductnegativejohndoe/deduct', json={"amount": -100})
     assert response.status_code == 400
     data = response.get_json()
     assert data['error'] == "Amount must be positive"
@@ -244,9 +245,14 @@ def test_deduct_customer_not_included(test_client):
         "gender": "Male",
         "marital_status": "Single"
     })
-    response = test_client.post('/customers/chargenovaluejohndoe/charge', json={})
+    response = test_client.post('/customers/chargenovaluejohndoe/deduct', json={})
     assert response.status_code == 400
     data = response.get_json()
     assert data['error'] == "Missing amount"
 
-# TODO deduct customer too much money, deduct customer doesnt exist, get all customers
+def test_deduct_customer_non_existent(test_client):
+    response = test_client.post('/customers/nonexistent/deduct', json={"amount": 100})
+    assert response.status_code == 404
+    data = response.get_json()
+    assert data['error'] == "Customer not found"
+# TODO deduct customer too much money, get all customers
