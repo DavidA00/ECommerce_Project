@@ -51,15 +51,14 @@ def test_login_invalid_password(test_client):
 
 def test_login_missing_username(test_client):
     data = {"password": "password123"} 
-    response = test_client.post('/login', json=data)
-    
+    response = test_client.post('/login', json=data)   
     assert response.status_code == 401
     assert response.json['error'] == "Invalid username or password"
+
 
 def test_login_missing_password(test_client):
     data = {"username": "testuser"} 
     response = test_client.post('/login', json=data)
-
     assert response.status_code == 401
     assert response.json['error'] == "Invalid username or password"
 
@@ -108,7 +107,6 @@ def test_create_review_nonexistent_product(test_client):
     assert response.json['error'] == "Product does not exist"
 
 # UPDATING A REVIEW
-
 def test_update_review_valid(test_client):
     token = generate_token(test_client)
     headers = {'Authorization': f'Bearer {token}'}
@@ -117,7 +115,7 @@ def test_update_review_valid(test_client):
         "rating": 5,
         "comment": "Excellent product!"
     }
-
+    
     response = test_client.post('/reviews', json=data, headers=headers)
     review_id = response.json['review']['review_id']
 
@@ -289,3 +287,4 @@ def test_get_review_details_invalidid(test_client):
     assert response.status_code == 404
 
 # TODO TEST FLAG
+

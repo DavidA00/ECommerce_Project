@@ -1,10 +1,10 @@
 from flask import Flask
 from db_config import db
-from customer_service.customer_app import User 
-from inventory_service.inventory_app import Product   
-from sales_service.sales_app import Sale  
-from reviews_service.reviews_app import Review 
-from werkzeug.security import generate_password_hash, check_password_hash
+from customer_service.customer_app import User
+from inventory_service.inventory_app import Product
+from sales_service.sales_app import Sale
+from reviews_service.reviews_app import Review
+from werkzeug.security import generate_password_hash
 import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -16,6 +16,15 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 with app.app_context():
+    """
+    Initializes the database by creating all required tables and setting up an admin user.
+
+    - Creates tables for `User`, `Product`, `Sale`, and `Review` models.
+    - Checks if an admin user exists; if not, creates a default admin user.
+
+    :raises RuntimeError: If app context is not properly set up.
+    """
+
     print("Creating database tables...")
     db.metadata.create_all(db.engine, tables=[
         User.__table__,
@@ -26,7 +35,7 @@ with app.app_context():
 
     admin_username = "admin1"
     existing_admin = User.query.filter_by(username=admin_username).first()
-    
+
     if not existing_admin:
         print("Creating admin user...")
         admin_user = User(
@@ -45,6 +54,5 @@ with app.app_context():
         print(f"Admin user '{admin_username}' created successfully.")
     else:
         print(f"Admin user '{admin_username}' already exists.")
-
 
     print("Database initialized successfully.")

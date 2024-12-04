@@ -6,8 +6,25 @@ app = Flask(__name__)
 init_db(app)
 app.config['SECRET_KEY'] = "222222222233333333"
 
-
 class Product(db.Model):
+    """
+    Represents a product in the inventory system.
+
+    :param name: Name of the product (primary key)
+    :type name: str
+    :param description: Description of the product
+    :type description: str
+    :param category: Category of the product
+    :type category: str
+    :param price: Price of the product
+    :type price: float
+    :param stock: Stock quantity of the product (default: 0)
+    :type stock: int
+    :param created_at: Timestamp of product creation (default: current UTC time)
+    :type created_at: datetime
+    :param updated_at: Timestamp of last product update (default: current UTC time, auto-updates on modification)
+    :type updated_at: datetime
+    """
     __tablename__ = 'Product'
     name = db.Column(db.String(100), primary_key=True)
     description = db.Column(db.String(500))
@@ -19,6 +36,12 @@ class Product(db.Model):
 
 @app.route('/products/new', methods=['POST'])
 def add_product():
+    """
+    Adds a new product to the inventory.
+
+    :return: JSON response with a success or error message
+    :rtype: flask.Response
+    """
     data = request.get_json()
     required_fields = ['name', 'category', 'price']
     if not all(field in data for field in required_fields):
@@ -40,6 +63,14 @@ def add_product():
 
 @app.route('/products/update/<string:name>', methods=['PUT'])
 def update_product(name):
+    """
+    Updates the details of an existing product.
+
+    :param name: Name of the product to update
+    :type name: str
+    :return: JSON response with a success or error message
+    :rtype: flask.Response
+    """
     product = Product.query.get(name)
     if not product:
         return jsonify({'error': 'Product not found'}), 404
@@ -54,6 +85,14 @@ def update_product(name):
 
 @app.route('/products/<string:name>', methods=['DELETE'])
 def delete_product(name):
+    """
+    Deletes a product from the inventory.
+
+    :param name: Name of the product to delete
+    :type name: str
+    :return: JSON response with a success or error message
+    :rtype: flask.Response
+    """
     product = Product.query.get(name)
     if not product:
         return jsonify({'error': 'Product not found'}), 404
@@ -64,6 +103,12 @@ def delete_product(name):
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
+    """
+    Retrieves a list of all products in the inventory.
+
+    :return: JSON response with a list of products
+    :rtype: flask.Response
+    """
     products = Product.query.all()
     output = []
     for product in products:
@@ -81,6 +126,14 @@ def get_all_products():
 
 @app.route('/products/<string:name>', methods=['GET'])
 def get_product(name):
+    """
+    Retrieves the details of a specific product.
+
+    :param name: Name of the product to retrieve
+    :type name: str
+    :return: JSON response with product details or an error message
+    :rtype: flask.Response
+    """
     product = Product.query.get(name)
     if not product:
         return jsonify({'error': 'Product not found'}), 404
@@ -98,6 +151,14 @@ def get_product(name):
 
 @app.route('/products/stock/<string:name>', methods=['POST'])
 def deducting_stock(name):
+    """
+    Deducts 1 unit of stock for a specific product.
+
+    :param name: Name of the product
+    :type name: str
+    :return: JSON response with a success or error message and updated stock quantity
+    :rtype: flask.Response
+    """
     product = Product.query.get(name)
     if not product:
         return jsonify({'error': 'Product not found'}), 404
