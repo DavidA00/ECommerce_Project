@@ -1,0 +1,540 @@
+         15830 function calls (15730 primitive calls) in 1.056 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        6    1.006    0.168    1.006    0.168 {method 'connect' of '_socket.socket' objects}
+       12    0.035    0.003    0.035    0.003 {method 'recv_into' of '_socket.socket' objects}
+       12    0.000    0.000    0.000    0.000 {built-in method nt._path_exists}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:221(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method _io.open_code}
+    51/19    0.000    0.000    0.000    0.000 <frozen abc>:121(__subclasscheck__)
+        6    0.000    0.000    0.000    0.000 {function socket.close at 0x000002ED9F22A160}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:227(_encode_invalid_chars)
+  982/958    0.000    0.000    0.001    0.000 {built-in method builtins.isinstance}
+        5    0.000    0.000    0.000    0.000 {built-in method nt.stat}
+       42    0.000    0.000    0.035    0.001 {method 'readline' of '_io.BufferedReader' objects}
+        6    0.000    0.000    0.038    0.006 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:481(getresponse)
+       12    0.000    0.000    0.000    0.000 {built-in method winreg.OpenKey}
+       18    0.000    0.000    0.000    0.000 {built-in method winreg.QueryValueEx}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py:2505(getproxies_environment)
+     1018    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+       60    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:374(urlparse)
+        6    0.000    0.000    1.049    0.175 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:673(send)
+      150    0.000    0.000    0.000    0.000 {method 'match' of 're.Pattern' objects}
+       72    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:154(get)
+    51/19    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+        6    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:369(parse_url)
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:216(_parsegen)
+        6    0.000    0.000    0.037    0.006 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:324(begin)
+        8    0.000    0.000    0.000    0.000 {method 'sendall' of '_socket.socket' objects}
+        6    0.000    0.000    0.002    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:204(get_netrc_auth)
+       66    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:122(put)
+1114/1108    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+       48    0.000    0.000    0.001    0.000 <frozen _collections_abc>:974(update)
+        6    0.000    0.000    1.054    0.176 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:500(request)
+        6    0.000    0.000    1.046    0.174 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:594(urlopen)
+        1    0.000    0.000    0.000    0.000 {built-in method marshal.loads}
+        6    0.000    0.000    0.004    0.001 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:457(prepare_request)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:304(makefile)
+        6    0.000    0.000    1.008    0.168 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:365(request)
+       10    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:452(urlsplit)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:469(_parse_headers)
+        6    0.000    0.000    1.045    0.174 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:379(_make_request)
+       66    0.000    0.000    0.000    0.000 <frozen os>:709(__getitem__)
+        6    0.000    0.000    1.048    0.175 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:613(send)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1292(putheader)
+      612    0.000    0.000    0.000    0.000 <frozen os>:732(__iter__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:95(_default_key_normalizer)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:177(__init__)
+      612    0.000    0.000    0.000    0.000 <frozen _collections_abc>:868(__iter__)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:124(RLock)
+  212/206    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:337(extend)
+      150    0.000    0.000    0.000    0.000 {built-in method _abc._abc_instancecheck}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:573(__init__)
+        6    0.000    0.000    0.035    0.006 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:291(_read_status)
+        6    0.000    0.000    0.000    0.000 {built-in method _socket.getaddrinfo}
+       42    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:61(merge_setting)
+       68    0.000    0.000    0.000    0.000 <frozen _collections_abc>:804(get)
+       48    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:494(get)
+        7    0.000    0.000    0.000    0.000 {method 'read' of '_io.BufferedReader' objects}
+       12    0.000    0.000    0.000    0.000 <frozen ntpath>:350(expanduser)
+       42    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:345(to_key_val_list)
+        6    0.000    0.000    1.055    0.176 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\api.py:14(request)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:409(prepare_url)
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:858(_raw_read)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:202(__init__)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:910(read)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:390(__init__)
+      138    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:46(__setitem__)
+       82    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:119(_coerce_args)
+        6    0.000    0.000    0.037    0.006 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1384(getresponse)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:137(__init__)
+       36    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:40(__init__)
+      126    0.000    0.000    0.000    0.000 <frozen _collections_abc>:892(__iter__)
+        6    0.000    0.000    1.007    0.168 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\connection.py:27(create_connection)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:315(__init__)
+       15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:96(_path_join)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:658(__init__)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:359(build_response)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1261(__init__)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:231(_parse_header_lines)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:463(read)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\parser.py:56(parsestr)
+      138    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:302(__exit__)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:521(cookiejar_from_dict)
+      120    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:51(__getitem__)
+        2    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\simplejson\encoder.py:306(iterencode)
+      224    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1136(putrequest)
+        6    0.000    0.000    1.007    0.168 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:193(_new_conn)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:199(__init__)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:596(get_content_type)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:351(putheader)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:124(extract_cookies_to_jar)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:351(prepare)
+      375    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1356(add_cookie_header)
+       54    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:164(hostname)
+      171    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\parser.py:41(parse)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:213(_read_headers)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:765(should_bypass_proxies)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:229(_new_pool)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\retry.py:202(__init__)
+       54    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:259(__getitem__)
+       60    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:205(_hostinfo)
+      283    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:143(clear)
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\_policybase.py:301(header_source_parse)
+      150    0.000    0.000    0.000    0.000 <frozen abc>:117(__instancecheck__)
+      132    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:394(notify)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:316(close)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1680(extract_cookies)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:242(__init__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\typing.py:392(inner)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:750(merge_environment_settings)
+       72    0.000    0.000    0.000    0.000 {method 'search' of 're.Pattern' objects}
+       66    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\_policybase.py:289(_sanitize_header)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:52(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:1174(_close_pool_connections)
+       12    0.000    0.000    0.035    0.003 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:706(readinto)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:76(proxy_bypass_registry)
+      138    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:299(__enter__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1599(make_cookies)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:865(__init__)
+        3    0.000    0.000    0.000    0.000 {built-in method builtins.__build_class__}
+       90    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+      132    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:314(_is_owned)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:261(__init__)
+       48    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:77(readline)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:483(prepare_headers)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:104(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:238(_new_conn)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\threading.py:277(__init__)
+        8    0.000    0.000    1.007    0.126 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1027(send)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:100(push)
+       48    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:127(__next__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:34(__init__)
+      102    0.000    0.000    0.000    0.000 {built-in method __new__ of type object at 0x00007FF880E858F0}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:679(_init_length)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:263(_remove_path_dot_segments)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:255(get)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:114(proxy_bypass)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\response.py:40(assert_header_parsing)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:529(get_all)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1227(deepvalues)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:240(init_poolmanager)
+      138    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:248(_qsize)
+        6    0.000    0.000    0.000    0.000 {method 'setsockopt' of '_socket.socket' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:494(prepare_body)
+       66    0.000    0.000    0.000    0.000 <frozen os>:783(encodekey)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:783(close)
+       12    0.000    0.000    0.000    0.000 {method 'readlines' of '_io._IOBase' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1593(find_spec)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:446(get_connection_with_tls_context)
+      198    0.000    0.000    0.000    0.000 {method 'partition' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\weakref.py:568(__init__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:838(select_proxy)
+      132    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.lock' objects}
+      162    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:58(<genexpr>)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:35(__init__)
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:176(_call_parse)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:305(connection_from_context)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:299(helper)
+       12    0.000    0.000    0.000    0.000 {method 'settimeout' of '_socket.socket' objects}
+        2    0.000    0.000    1.031    0.515 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\api.py:103(post)
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:302(add)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:243(get_payload)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:140(get_cookie_header)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:109(__init__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\encodings\idna.py:155(encode)
+       66    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\_policybase.py:319(header_fetch_parse)
+      145    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
+      357    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:330(connection_from_pool_key)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:134(__init__)
+       42    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+       72    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\utils.py:52(_has_surrogates)
+       66    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+        6    0.000    0.000    0.000    0.000 {method 'close' of '_io.BufferedReader' objects}
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:1038(stream)
+      138    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+       54    0.000    0.000    0.001    0.000 {method 'join' of 'bytes' objects}
+       34    0.000    0.000    0.000    0.000 <frozen _collections_abc>:811(__contains__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:84(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:694(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:90(_urllib3_request_context)
+      122    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\weakref.py:585(__call__)
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:57(__iter__)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:735(_error_catcher)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:900(default_headers)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:1018(get_auth_from_url)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:29(_splitparam)
+       48    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:1045(_validate_header_part)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\request.py:189(body_to_chunks)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:245(parse_headers)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:100(__new__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:539(get_encoding_from_headers)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:106(_encode_params)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:959(getaddrinfo)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:536(close)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:100(_intenum_converter)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:542(merge_cookies)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\typing.py:1492(__subclasscheck__)
+       70    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        2    0.000    0.000    0.009    0.005 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\api.py:62(get)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:303(_normalize_host)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:890(content)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:396(build_connection_pool_key_attributes)
+       66    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:254(_get)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:799(mount)
+       85    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:182(close)
+       24    0.000    0.000    0.000    0.000 <frozen _collections_abc>:823(items)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\enum.py:726(__call__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:794(close)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:400(<genexpr>)
+       46    0.000    0.000    0.000    0.000 {method 'lstrip' of 'str' objects}
+       42    0.000    0.000    0.000    0.000 {built-in method builtins.any}
+       69    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+      100    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:258(__init__)
+      102    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+       48    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\retry.py:242(<genexpr>)
+       36    0.000    0.000    0.000    0.000 {method 'fullmatch' of 're.Pattern' objects}
+       95    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:141(__exit__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:331(putrequest)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap_external>:1062(get_code)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:159(resolve_redirects)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1753(__iter__)
+       66    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:251(_put)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:171(feed)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:132(__enter__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py:2702(getproxies_registry)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:801(_fp_read)
+       12    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:816(generate)
+       10    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:413(_splitnetloc)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:826(get_environ_proxies)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\typing.py:1221(__instancecheck__)
+        6    0.000    0.000    1.007    0.168 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1082(_send_output)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:509(urlunparse)
+       69    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+      138    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:635(release_conn)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:1517(debug)
+       72    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:353(<genexpr>)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:660(requote_uri)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:446(_init_decoder)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:546(request_url)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\hooks.py:15(default_hooks)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\typing.py:1285(__hash__)
+       73    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\encodings\__init__.py:71(search_function)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:483(items)
+        6    0.000    0.000    1.007    0.168 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:278(connect)
+       66    0.000    0.000    0.000    0.000 <frozen os>:777(check_str)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:1790(isEnabledFor)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\request.py:2751(getproxies)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:172(from_float)
+        7    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:102(__setitem__)
+        6    0.000    0.000    0.001    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:276(connection_from_host)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:334(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:85(path_url)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:884(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:799(iter_content)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:244(__init__)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:1034(check_header_validity)
+        1    0.000    0.000    0.000    0.000 {method '__exit__' of '_io._IOBase' objects}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:620(get_content_maintype)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:935(quote_from_bytes)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:267(clear)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:140(__init__)
+       18    0.000    0.000    0.000    0.000 {method 'subn' of 're.Pattern' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:175(port)
+       54    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\util.py:19(to_str)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:207(register_hook)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:781(get_adapter)
+       12    0.000    0.000    0.000    0.000 {method '_checkReadable' of '_io._IOBase' objects}
+       12    0.000    0.000    0.000    0.000 <frozen ntpath>:35(_get_bothseps)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:501(close)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:859(quote)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:81(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:258(_get_conn)
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:511(set_raw)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:393(prepare_method)
+        1    0.000    0.000    0.008    0.008 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\api.py:118(put)
+       52    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1013(close)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:95(__getitem__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\retry.py:387(is_retry)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:195(_new_message)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:610(prepare_cookies)
+        6    0.000    0.000    1.007    0.168 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1320(endheaders)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:251(put)
+       48    0.000    0.000    0.000    0.000 {method 'setdefault' of 'dict' objects}
+       14    0.000    0.000    0.000    0.000 {built-in method sys.audit}
+       54    0.000    0.000    0.000    0.000 {method 'values' of 'collections.OrderedDict' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:296(_put_conn)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:69(close)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:150(__init__)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1349(_find_and_load)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:121(pushlines)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:572(prepare_content_length)
+       12    0.000    0.000    0.000    0.000 {function SocketIO.close at 0x000002ED9F22AD40}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:676(unquote)
+       24    0.000    0.000    0.000    0.000 {method 'count' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:520(urlunsplit)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:188(clone)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1297(_cookie_attrs)
+        2    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\simplejson\encoder.py:277(encode)
+       54    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+       36    0.000    0.000    0.000    0.000 <frozen _collections_abc>:845(__init__)
+       12    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:358(update)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1183(get_data)
+       24    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:164(host)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:588(prepare_auth)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1240(_find_spec)
+       24    0.000    0.000    0.000    0.000 {built-in method time.time}
+       42    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1064(_output)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:396(_check_close)
+        1    0.000    0.000    0.007    0.007 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\api.py:148(delete)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:947(_wrap_ipv6)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\connection.py:93(_set_socket_options)
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\_internal_utils.py:25(to_native_string)
+       36    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_collections.py:291(__iter__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1734(clear_expired_cookies)
+       18    0.000    0.000    0.000    0.000 {method 'count' of 'bytes' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:962(urlencode)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:430(close)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:745(readable)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\enum.py:1129(__new__)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:126(resolve_default_timeout)
+       62    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\response.py:9(is_fp_closed)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\retry.py:379(_is_method_retryable)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:636(unquote_unreserved)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\encodings\idna.py:308(getregentry)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:304(acquire)
+        6    0.000    0.000    0.000    0.000 {method 'Close' of 'winreg.PyHKEY' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:348(_get_timeout)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\url.py:351(_encode_target)
+       12    0.000    0.000    0.000    0.000 <frozen _collections_abc>:819(keys)
+        6    0.000    0.000    0.000    0.000 {method 'write' of '_io.StringIO' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:156(username)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:403(retries)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:426(_get_module_lock)
+       12    0.000    0.000    0.000    0.000 {method 'pop' of 'collections.OrderedDict' objects}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:211(<genexpr>)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:107(get_redirect_target)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:769(is_redirect)
+       25    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.RLock' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:425(_close_conn)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1491(_get_spec)
+       82    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:108(_noop)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:1079(closed)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:1149(_normalize_host)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:245(read_timeout)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:774(get_proxy)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:630(prepare_hooks)
+       18    0.000    0.000    0.000    0.000 {method 'decode' of 'bytearray' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:514(_parse_content_type_header)
+       72    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:130(_validate_timeout)
+       48    0.000    0.000    0.000    0.000 {method 'popleft' of 'collections.deque' objects}
+       24    0.000    0.000    0.000    0.000 {method 'groups' of 're.Match' objects}
+       12    0.000    0.000    0.000    0.000 {method 'write' of '_io.BytesIO' objects}
+       30    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:453(isclosed)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:454(__exit__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:806(module_from_spec)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\poolmanager.py:374(_merge_pool_kwargs)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\netrc.py:1(<module>)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1304(_find_and_load_unlocked)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:304(cert_verify)
+        6    0.000    0.000    0.000    0.000 {built-in method _socket.getdefaulttimeout}
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:482(cache_from_source)
+       12    0.000    0.000    0.000    0.000 {method 'read' of '_io.StringIO' objects}
+        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:645(parent)
+       12    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
+        2    0.000    0.000    0.000    0.000 <frozen _collections_abc>:104(_check_methods)
+       12    0.000    0.000    0.000    0.000 {method 'clear' of 'collections.OrderedDict' objects}
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\_request_methods.py:51(__init__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:442(flush)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:91(merge_hooks)
+       38    0.000    0.000    0.000    0.000 <frozen _collections_abc>:435(__subclasshook__)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:911(_load_unlocked)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:497(_real_close)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap_external>:989(exec_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:802(spec_from_file_location)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:202(start_connect)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:76(copy)
+       10    0.000    0.000    0.000    0.000 {method 'isalpha' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:84(_unpack_uint32)
+        2    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:135(super_len)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:751(_compile_bytecode)
+        6    0.000    0.000    0.000    0.000 <string>:1(<lambda>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1588(_get_spec)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:331(set_payload)
+        6    0.000    0.000    0.000    0.000 {method 'isdigit' of 'str' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\socket.py:491(_decref_socketios)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:193(_userinfo)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\connection.py:103(allowed_gai_family)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1284(_validate_host)
+        2    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\simplejson\__init__.py:276(dumps)
+       26    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.RLock' objects}
+       30    0.000    0.000    0.000    0.000 {method 'isascii' of 'str' objects}
+       12    0.000    0.000    0.000    0.000 {method 'split' of 'bytes' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:208(_pop_message)
+       12    0.000    0.000    0.000    0.000 {method '_checkClosed' of '_io._IOBase' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\message.py:211(is_multipart)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:611(_get_cached)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:132(_path_split)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:733(_init_module_attrs)
+        6    0.000    0.000    0.000    0.000 {method 'rstrip' of 'bytes' objects}
+       24    0.000    0.000    0.000    0.000 {method 'items' of 'collections.OrderedDict' objects}
+       12    0.000    0.000    0.000    0.000 {method 'extend' of 'collections.deque' objects}
+       25    0.000    0.000    0.000    0.000 {method 'release' of '_thread.RLock' objects}
+        6    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:1290(_cookies_for_request)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:343(<genexpr>)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\hooks.py:22(dispatch_hook)
+       24    0.000    0.000    0.000    0.000 {method 'seek' of '_io.StringIO' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:74(__new__)
+       10    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\request.py:134(set_file_position)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:248(__len__)
+       12    0.000    0.000    0.000    0.000 {method 'truncate' of '_io.StringIO' objects}
+        6    0.000    0.000    0.000    0.000 <frozen _collections_abc>:848(__len__)
+       12    0.000    0.000    0.000    0.000 {built-in method time.perf_counter}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.all}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\response.py:465(_decode)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:891(default_user_agent)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\_internal_utils.py:38(unicode_is_ascii)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:124(setdefault)
+       16    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:491(_verbose_message)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:372(release)
+        6    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\encodings\__init__.py:43(normalize_encoding)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\parser.py:17(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1520(find_spec)
+        5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:140(_path_stat)
+        1    0.000    0.000    0.000    0.000 <frozen codecs>:94(__new__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:162(__enter__)
+       12    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\structures.py:60(__len__)
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:924(_get_hostport)
+        6    0.000    0.000    0.000    0.000 {method 'getvalue' of '_io.BytesIO' objects}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1267(_validate_method)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:666(_classify_pyc)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:67(_relax_case)
+       10    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\urllib\parse.py:421(_checknetloc)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\cookiejar.py:44(_debug)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:172(_path_isabs)
+       15    0.000    0.000    0.000    0.000 {built-in method nt.fspath}
+       12    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
+       12    0.000    0.000    0.000    0.000 {method 'update' of 'collections.OrderedDict' objects}
+        4    0.000    0.000    0.000    0.000 {built-in method builtins.max}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(__enter__)
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\utils.py:743(set_environ)
+       24    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:117(info)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1263(_encode_request)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:1776(getEffectiveLevel)
+       18    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\timeout.py:227(connect_timeout)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:480(_call_with_frames_removed)
+        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:134(<genexpr>)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\http\client.py:1276(_validate_path)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(__init__)
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.__import__}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:110(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen _collections_abc>:288(__subclasshook__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:183(host)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\netrc.py:66(netrc)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:82(remove)
+        1    0.000    0.000    0.000    0.000 <frozen _collections_abc>:549(__subclasshook__)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1469(_path_importer_cache)
+        6    0.000    0.000    0.000    0.000 {built-in method time.monotonic}
+        6    0.000    0.000    0.000    0.000 {method 'pop' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1202(path_stats)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:699(_validate_timestamp_pyc)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\queue.py:245(_init)
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.hash}
+       12    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\email\feedparser.py:124(__iter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:159(_path_isfile)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:643(_check_name_wrapper)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:420(__exit__)
+        2    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\util.py:7(to_bytes)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:982(find_spec)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:632(cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:185(_path_abspath)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\util\proxy.py:11(connection_requires_http_tunnel)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connectionpool.py:339(_validate_conn)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:48(_new_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:173(__exit__)
+        6    0.000    0.000    0.000    0.000 {function HTTPResponse.flush at 0x000002ED9F355E40}
+        3    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\urllib3\connection.py:295(is_closed)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\models.py:216(<genexpr>)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1128(find_spec)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:150(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:234(_acquireLock)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1222(__enter__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:445(cb)
+        4    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method _imp.find_frozen}
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:1369(disable)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:79(__init__)
+        5    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\cookies.py:87(get_new_headers)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\netrc.py:10(NetrcParseError)
+        1    0.000    0.000    0.000    0.000 {built-in method atexit.register}
+        5    0.000    0.000    0.000    0.000 {built-in method _imp.release_lock}
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\typing.py:2182(cast)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\sessions.py:451(__enter__)
+        6    0.000    0.000    0.000    0.000 C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\requests\adapters.py:578(add_headers)
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\netrc.py:22(_netrclex)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1226(__exit__)
+        1    0.000    0.000    0.000    0.000 {built-in method nt._path_splitroot}
+        2    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        4    0.000    0.000    0.000    0.000 {method 'isalnum' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'clear' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 C:\Users\mkrei\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py:243(_releaseLock)
+        1    0.000    0.000    0.000    0.000 {built-in method _weakref._remove_dead_weakref}
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:599(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1153(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:653(has_location)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1178(get_filename)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:986(create_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:158(__init__)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:412(__init__)
+
+

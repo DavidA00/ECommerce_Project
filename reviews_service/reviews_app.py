@@ -21,6 +21,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+
 def log_operation(endpoint, method, username=None, status=None, data=None):
     """
     Logs API operations to a file.

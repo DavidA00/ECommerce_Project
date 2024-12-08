@@ -298,4 +298,3 @@ def test_get_all_customers(test_client):
 
     assert new == original + 1
 
-# TODO deduct customer too much money, get all customers

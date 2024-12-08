@@ -33,3 +33,1370 @@
 2024-12-04 13:18:12,599 - INFO - 127.0.0.1 - - [04/Dec/2024 13:18:12] "POST /login HTTP/1.1" 200 -
 2024-12-04 13:19:52,535 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'nosales', 'status': 200, 'data': None}
 2024-12-04 13:19:52,536 - INFO - 127.0.0.1 - - [04/Dec/2024 13:19:52] "POST /login HTTP/1.1" 200 -
+2024-12-04 14:41:02,148 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-04 14:41:02,149 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-04 14:44:47,486 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-04 14:44:47,487 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:10:55,077 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 00:10:55,077 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:10:55,389 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,397 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mGET /customers HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,405 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mGET /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,421 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mPUT /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,437 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mPOST /customers/johndoe/charge HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,445 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mPOST /customers/johndoe/deduct HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 243, in charge_customer
+    log_operation(f'/customers/{username}/charge', 'POST', username, 200, {"message": "Wallet charged", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 96, in register_customer
+    log_operation('/customers/new', 'POST', None, 400, {"error": "Username already taken"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 186, in get_all_customers
+    log_operation('/customers', 'GET', None, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 278, in deduct_from_customer
+    log_operation(f'/customers/{username}/deduct', 'POST', username, 200, {"message": "Amount deducted", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 212, in get_customer
+    log_operation(f'/customers/{username}', 'GET', username, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,461 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 161, in update_customer
+    log_operation(f'/customers/{username}', 'PUT', username, 200, {"message": "Customer updated successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:10:55,469 - INFO - 127.0.0.1 - - [05/Dec/2024 00:10:55] "[35m[1mDELETE /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:10:55,469 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 134, in delete_customer
+    log_operation(f'/customers/{username}', 'DELETE', username, 200, {"message": "Customer deleted successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,184 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 00:15:01,184 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:15:01,763 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,771 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mGET /customers HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,779 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mGET /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,803 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mPUT /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,807 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 186, in get_all_customers
+    log_operation('/customers', 'GET', None, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,807 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 212, in get_customer
+    log_operation(f'/customers/{username}', 'GET', username, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,807 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 115, in register_customer
+    log_operation('/customers/new', 'POST', data['username'], 201, {"message": "Customer registered successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,807 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 161, in update_customer
+    log_operation(f'/customers/{username}', 'PUT', username, 200, {"message": "Customer updated successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,811 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mPOST /customers/johndoe/charge HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,819 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 243, in charge_customer
+    log_operation(f'/customers/{username}/charge', 'POST', username, 200, {"message": "Wallet charged", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,827 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mPOST /customers/johndoe/deduct HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,827 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 278, in deduct_from_customer
+    log_operation(f'/customers/{username}/deduct', 'POST', username, 200, {"message": "Amount deducted", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:15:01,835 - INFO - 127.0.0.1 - - [05/Dec/2024 00:15:01] "[35m[1mDELETE /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:15:01,843 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 134, in delete_customer
+    log_operation(f'/customers/{username}', 'DELETE', username, 200, {"message": "Customer deleted successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:39:28,742 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 00:39:28,743 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:41:59,446 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 00:41:59,446 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:41:59,682 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 400, 'data': {'error': 'Product name already exists'}}
+2024-12-05 00:41:59,685 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "[31m[1mPOST /products/new HTTP/1.1[0m" 400 -
+2024-12-05 00:41:59,691 - INFO - {'endpoint': '/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:41:59,691 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "GET /products HTTP/1.1" 200 -
+2024-12-05 00:41:59,696 - INFO - {'endpoint': '/products/TestProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:41:59,697 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "GET /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:41:59,707 - INFO - {'endpoint': '/products/update/TestProduct', 'method': 'PUT', 'username': None, 'status': 200, 'data': {'message': 'Product updated successfully'}}
+2024-12-05 00:41:59,708 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "PUT /products/update/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:41:59,715 - INFO - {'endpoint': '/products/stock/TestProduct', 'method': 'POST', 'username': None, 'status': 200, 'data': {'message': 'Removed 1 item from Stock successfully'}}
+2024-12-05 00:41:59,716 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "POST /products/stock/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:41:59,723 - INFO - {'endpoint': '/products/TestProduct', 'method': 'DELETE', 'username': None, 'status': 200, 'data': {'message': 'Product deleted successfully'}}
+2024-12-05 00:41:59,723 - INFO - 127.0.0.1 - - [05/Dec/2024 00:41:59] "DELETE /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:43:08,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 00:43:08,761 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:43:09,078 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,084 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mGET /customers HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,088 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mGET /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,096 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mPUT /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,103 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 115, in register_customer
+    log_operation('/customers/new', 'POST', data['username'], 201, {"message": "Customer registered successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,103 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 212, in get_customer
+    log_operation(f'/customers/{username}', 'GET', username, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,104 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 161, in update_customer
+    log_operation(f'/customers/{username}', 'PUT', username, 200, {"message": "Customer updated successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,104 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 186, in get_all_customers
+    log_operation('/customers', 'GET', None, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,104 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mPOST /customers/johndoe/charge HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,106 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 243, in charge_customer
+    log_operation(f'/customers/{username}/charge', 'POST', username, 200, {"message": "Wallet charged", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,111 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mPOST /customers/johndoe/deduct HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,114 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 278, in deduct_from_customer
+    log_operation(f'/customers/{username}/deduct', 'POST', username, 200, {"message": "Amount deducted", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:43:09,119 - INFO - 127.0.0.1 - - [05/Dec/2024 00:43:09] "[35m[1mDELETE /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 00:43:09,121 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 134, in delete_customer
+    log_operation(f'/customers/{username}', 'DELETE', username, 200, {"message": "Customer deleted successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:51:18,854 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 00:51:18,854 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:51:19,113 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 201, 'data': {'message': 'Product added successfully'}}
+2024-12-05 00:51:19,113 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "[35m[1mPOST /products/new HTTP/1.1[0m" 201 -
+2024-12-05 00:51:19,118 - INFO - {'endpoint': '/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:51:19,118 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "GET /products HTTP/1.1" 200 -
+2024-12-05 00:51:19,123 - INFO - {'endpoint': '/products/TestProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:51:19,124 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "GET /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:51:19,134 - INFO - {'endpoint': '/products/update/TestProduct', 'method': 'PUT', 'username': None, 'status': 200, 'data': {'message': 'Product updated successfully'}}
+2024-12-05 00:51:19,134 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "PUT /products/update/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:51:19,141 - INFO - {'endpoint': '/products/stock/TestProduct', 'method': 'POST', 'username': None, 'status': 200, 'data': {'message': 'Removed 1 item from Stock successfully'}}
+2024-12-05 00:51:19,142 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "POST /products/stock/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:51:19,149 - INFO - {'endpoint': '/products/TestProduct', 'method': 'DELETE', 'username': None, 'status': 200, 'data': {'message': 'Product deleted successfully'}}
+2024-12-05 00:51:19,149 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:19] "DELETE /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 00:51:49,793 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 00:51:49,793 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 00:51:49,793 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:51:49,794 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:51:49,808 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:6000
+2024-12-05 00:51:49,809 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:51:49,809 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 201, 'data': {'message': 'Product added successfully'}}
+2024-12-05 00:51:49,810 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "[35m[1mPOST /products/new HTTP/1.1[0m" 201 -
+2024-12-05 00:51:49,940 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 00:51:49,949 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 115, in register_customer
+    log_operation('/customers/new', 'POST', data['username'], 201, {"message": "Customer registered successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 00:51:49,950 - INFO - {'endpoint': '/sales', 'method': 'POST', 'username': 'janedoe', 'status': 400, 'data': {'error': 'Insufficient wallet balance.'}}
+2024-12-05 00:51:49,951 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "[31m[1mPOST /sales HTTP/1.1[0m" 400 -
+2024-12-05 00:51:49,956 - INFO - {'endpoint': '/sales/history/janedoe', 'method': 'GET', 'username': 'janedoe', 'status': 404, 'data': {'error': 'No sales found.'}}
+2024-12-05 00:51:49,957 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "[33mGET /sales/history/janedoe HTTP/1.1[0m" 404 -
+2024-12-05 00:51:49,962 - INFO - {'endpoint': '/sales/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:51:49,962 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "GET /sales/products HTTP/1.1" 200 -
+2024-12-05 00:51:49,966 - INFO - {'endpoint': '/sales/products/SampleProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:51:49,966 - INFO - 127.0.0.1 - - [05/Dec/2024 00:51:49] "GET /sales/products/SampleProduct HTTP/1.1" 200 -
+2024-12-05 00:58:30,493 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-12-05 00:58:30,493 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 00:58:30,782 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'janedoe', 'status': 200, 'data': None}
+2024-12-05 00:58:30,783 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "POST /login HTTP/1.1" 200 -
+2024-12-05 00:58:30,794 - INFO - {'endpoint': '/reviews', 'method': 'POST', 'username': 'janedoe', 'status': 201, 'data': {'product_name': 'SampleProduct', 'rating': 5, 'comment': 'Amazing product!'}}
+2024-12-05 00:58:30,797 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "[35m[1mPOST /reviews HTTP/1.1[0m" 201 -
+2024-12-05 00:58:30,802 - INFO - {'endpoint': '/reviews/update/1', 'method': 'PUT', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 00:58:30,802 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "[31m[1mPUT /reviews/update/1 HTTP/1.1[0m" 403 -
+2024-12-05 00:58:30,806 - INFO - {'endpoint': '/reviews/delete/1', 'method': 'DELETE', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 00:58:30,806 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "[31m[1mDELETE /reviews/delete/1 HTTP/1.1[0m" 403 -
+2024-12-05 00:58:30,810 - INFO - {'endpoint': '/reviews/product/SampleProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 00:58:30,811 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "GET /reviews/product/SampleProduct HTTP/1.1" 200 -
+2024-12-05 00:58:30,815 - INFO - {'endpoint': '/reviews/customer/janedoe', 'method': 'GET', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 00:58:30,815 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "[31m[1mGET /reviews/customer/janedoe HTTP/1.1[0m" 403 -
+2024-12-05 00:58:30,818 - INFO - {'endpoint': '/reviews/flag/1', 'method': 'PUT', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 00:58:30,819 - INFO - 127.0.0.1 - - [05/Dec/2024 00:58:30] "[31m[1mPUT /reviews/flag/1 HTTP/1.1[0m" 403 -
+2024-12-05 01:00:21,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 01:00:21,502 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:21,844 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,850 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mGET /customers HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,855 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mGET /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,864 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 115, in register_customer
+    log_operation('/customers/new', 'POST', data['username'], 201, {"message": "Customer registered successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,865 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 212, in get_customer
+    log_operation(f'/customers/{username}', 'GET', username, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,865 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 186, in get_all_customers
+    log_operation('/customers', 'GET', None, 200)
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,866 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mPUT /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,868 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 161, in update_customer
+    log_operation(f'/customers/{username}', 'PUT', username, 200, {"message": "Customer updated successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,873 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mPOST /customers/johndoe/charge HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,875 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 243, in charge_customer
+    log_operation(f'/customers/{username}/charge', 'POST', username, 200, {"message": "Wallet charged", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,881 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mPOST /customers/johndoe/deduct HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,882 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 278, in deduct_from_customer
+    log_operation(f'/customers/{username}/deduct', 'POST', username, 200, {"message": "Amount deducted", "amount": amount})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:21,887 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:21] "[35m[1mDELETE /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:00:21,889 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 134, in delete_customer
+    log_operation(f'/customers/{username}', 'DELETE', username, 200, {"message": "Customer deleted successfully"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:27,524 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 01:00:27,524 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:27,758 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 201, 'data': {'message': 'Product added successfully'}}
+2024-12-05 01:00:27,759 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "[35m[1mPOST /products/new HTTP/1.1[0m" 201 -
+2024-12-05 01:00:27,763 - INFO - {'endpoint': '/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:00:27,764 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "GET /products HTTP/1.1" 200 -
+2024-12-05 01:00:27,768 - INFO - {'endpoint': '/products/TestProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:00:27,768 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "GET /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 01:00:27,776 - INFO - {'endpoint': '/products/update/TestProduct', 'method': 'PUT', 'username': None, 'status': 200, 'data': {'message': 'Product updated successfully'}}
+2024-12-05 01:00:27,777 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "PUT /products/update/TestProduct HTTP/1.1" 200 -
+2024-12-05 01:00:27,783 - INFO - {'endpoint': '/products/stock/TestProduct', 'method': 'POST', 'username': None, 'status': 200, 'data': {'message': 'Removed 1 item from Stock successfully'}}
+2024-12-05 01:00:27,784 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "POST /products/stock/TestProduct HTTP/1.1" 200 -
+2024-12-05 01:00:27,791 - INFO - {'endpoint': '/products/TestProduct', 'method': 'DELETE', 'username': None, 'status': 200, 'data': {'message': 'Product deleted successfully'}}
+2024-12-05 01:00:27,792 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:27] "DELETE /products/TestProduct HTTP/1.1" 200 -
+2024-12-05 01:00:34,259 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 01:00:34,259 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:34,259 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:34,267 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:6000
+2024-12-05 01:00:34,267 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:34,359 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 400, 'data': {'error': 'Product name already exists'}}
+2024-12-05 01:00:34,360 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "[31m[1mPOST /products/new HTTP/1.1[0m" 400 -
+2024-12-05 01:00:34,370 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 01:00:34,381 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 96, in register_customer
+    log_operation('/customers/new', 'POST', None, 400, {"error": "Username already taken"})
+  File "C:\Users/mkrei/OneDrive/Desktop/Fall 2024/EECE 439/EECE 439 - Final Project/ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:00:34,382 - INFO - {'endpoint': '/sales', 'method': 'POST', 'username': 'janedoe', 'status': 400, 'data': {'error': 'Insufficient wallet balance.'}}
+2024-12-05 01:00:34,382 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "[31m[1mPOST /sales HTTP/1.1[0m" 400 -
+2024-12-05 01:00:34,387 - INFO - {'endpoint': '/sales/history/janedoe', 'method': 'GET', 'username': 'janedoe', 'status': 404, 'data': {'error': 'No sales found.'}}
+2024-12-05 01:00:34,388 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "[33mGET /sales/history/janedoe HTTP/1.1[0m" 404 -
+2024-12-05 01:00:34,391 - INFO - {'endpoint': '/sales/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:00:34,391 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "GET /sales/products HTTP/1.1" 200 -
+2024-12-05 01:00:34,395 - INFO - {'endpoint': '/sales/products/SampleProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:00:34,395 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:34] "GET /sales/products/SampleProduct HTTP/1.1" 200 -
+2024-12-05 01:00:39,816 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-12-05 01:00:39,816 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:00:40,088 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'janedoe', 'status': 200, 'data': None}
+2024-12-05 01:00:40,089 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "POST /login HTTP/1.1" 200 -
+2024-12-05 01:00:40,102 - INFO - {'endpoint': '/reviews', 'method': 'POST', 'username': 'janedoe', 'status': 201, 'data': {'product_name': 'SampleProduct', 'rating': 5, 'comment': 'Amazing product!'}}
+2024-12-05 01:00:40,104 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "[35m[1mPOST /reviews HTTP/1.1[0m" 201 -
+2024-12-05 01:00:40,109 - INFO - {'endpoint': '/reviews/update/1', 'method': 'PUT', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 01:00:40,110 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "[31m[1mPUT /reviews/update/1 HTTP/1.1[0m" 403 -
+2024-12-05 01:00:40,116 - INFO - {'endpoint': '/reviews/delete/1', 'method': 'DELETE', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 01:00:40,116 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "[31m[1mDELETE /reviews/delete/1 HTTP/1.1[0m" 403 -
+2024-12-05 01:00:40,121 - INFO - {'endpoint': '/reviews/product/SampleProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:00:40,121 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "GET /reviews/product/SampleProduct HTTP/1.1" 200 -
+2024-12-05 01:00:40,126 - INFO - {'endpoint': '/reviews/customer/janedoe', 'method': 'GET', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 01:00:40,126 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "[31m[1mGET /reviews/customer/janedoe HTTP/1.1[0m" 403 -
+2024-12-05 01:00:40,130 - INFO - {'endpoint': '/reviews/flag/1', 'method': 'PUT', 'username': 'janedoe', 'status': 403, 'data': None}
+2024-12-05 01:00:40,130 - INFO - 127.0.0.1 - - [05/Dec/2024 01:00:40] "[31m[1mPUT /reviews/flag/1 HTTP/1.1[0m" 403 -
+2024-12-05 01:39:41,125 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4000
+2024-12-05 01:39:41,126 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:39:41,601 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mPOST /customers/new HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,610 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mGET /customers HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,616 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 186, in get_all_customers
+    log_operation('/customers', 'GET', None, 200)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,617 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 115, in register_customer
+    log_operation('/customers/new', 'POST', data['username'], 201, {"message": "Customer registered successfully"})
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,619 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mGET /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,622 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 212, in get_customer
+    log_operation(f'/customers/{username}', 'GET', username, 200)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,632 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mPUT /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,636 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 161, in update_customer
+    log_operation(f'/customers/{username}', 'PUT', username, 200, {"message": "Customer updated successfully"})
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,645 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mPOST /customers/johndoe/charge HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,647 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 243, in charge_customer
+    log_operation(f'/customers/{username}/charge', 'POST', username, 200, {"message": "Wallet charged", "amount": amount})
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,656 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mPOST /customers/johndoe/deduct HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,659 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 278, in deduct_from_customer
+    log_operation(f'/customers/{username}/deduct', 'POST', username, 200, {"message": "Amount deducted", "amount": amount})
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:39:41,668 - INFO - 127.0.0.1 - - [05/Dec/2024 01:39:41] "[35m[1mDELETE /customers/johndoe HTTP/1.1[0m" 500 -
+2024-12-05 01:39:41,671 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 134, in delete_customer
+    log_operation(f'/customers/{username}', 'DELETE', username, 200, {"message": "Customer deleted successfully"})
+  File "C:\Users\mkrei\OneDrive\Desktop\Fall 2024\EECE 439\EECE 439 - Final Project\ECommerce_Project\customer_service\customer_app.py", line 34, in log_operation
+    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2024-12-05 01:50:37,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-05 01:50:37,535 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:50:37,945 - INFO - {'endpoint': '/products/new', 'method': 'POST', 'username': None, 'status': 400, 'data': {'error': 'Product name already exists'}}
+2024-12-05 01:50:37,945 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:37] "[31m[1mPOST /products/new HTTP/1.1[0m" 400 -
+2024-12-05 01:50:37,956 - INFO - {'endpoint': '/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:50:37,957 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:37] "GET /products HTTP/1.1" 200 -
+2024-12-05 01:50:37,967 - INFO - {'endpoint': '/products/Laptop', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:50:37,968 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:37] "GET /products/Laptop HTTP/1.1" 200 -
+2024-12-05 01:50:37,983 - INFO - {'endpoint': '/products/update/Laptop', 'method': 'PUT', 'username': None, 'status': 200, 'data': {'message': 'Product updated successfully'}}
+2024-12-05 01:50:37,984 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:37] "PUT /products/update/Laptop HTTP/1.1" 200 -
+2024-12-05 01:50:37,996 - INFO - {'endpoint': '/products/stock/Laptop', 'method': 'POST', 'username': None, 'status': 200, 'data': {'message': 'Removed 1 item from Stock successfully'}}
+2024-12-05 01:50:37,997 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:37] "POST /products/stock/Laptop HTTP/1.1" 200 -
+2024-12-05 01:50:38,008 - INFO - {'endpoint': '/products/Laptop', 'method': 'DELETE', 'username': None, 'status': 200, 'data': {'message': 'Product deleted successfully'}}
+2024-12-05 01:50:38,008 - INFO - 127.0.0.1 - - [05/Dec/2024 01:50:38] "DELETE /products/Laptop HTTP/1.1" 200 -
+2024-12-05 01:54:58,333 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-12-05 01:54:58,334 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:54:58,805 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'admin', 'status': 401, 'data': None}
+2024-12-05 01:54:58,805 - INFO - 127.0.0.1 - - [05/Dec/2024 01:54:58] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-12-05 01:58:51,947 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:7000
+2024-12-05 01:58:51,948 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 01:58:52,067 - INFO - {'endpoint': '/login', 'method': 'POST', 'username': 'admin1', 'status': 200, 'data': None}
+2024-12-05 01:58:52,068 - INFO - 127.0.0.1 - - [05/Dec/2024 01:58:52] "POST /login HTTP/1.1" 200 -
+2024-12-05 01:58:52,080 - INFO - {'endpoint': '/reviews', 'method': 'POST', 'username': 'admin1', 'status': 401, 'data': None}
+2024-12-05 01:58:52,080 - INFO - 127.0.0.1 - - [05/Dec/2024 01:58:52] "[31m[1mPOST /reviews HTTP/1.1[0m" 400 -
+2024-12-05 01:58:52,090 - INFO - {'endpoint': '/reviews/product/Laptop', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 01:58:52,090 - INFO - 127.0.0.1 - - [05/Dec/2024 01:58:52] "GET /reviews/product/Laptop HTTP/1.1" 200 -
+2024-12-05 01:58:52,101 - INFO - {'endpoint': '/reviews/update/1', 'method': 'PUT', 'username': 'admin1', 'status': 403, 'data': None}
+2024-12-05 01:58:52,101 - INFO - 127.0.0.1 - - [05/Dec/2024 01:58:52] "[31m[1mPUT /reviews/update/1 HTTP/1.1[0m" 403 -
+2024-12-05 01:58:52,108 - INFO - {'endpoint': '/reviews/delete/1', 'method': 'DELETE', 'username': 'admin1', 'status': 403, 'data': None}
+2024-12-05 01:58:52,109 - INFO - 127.0.0.1 - - [05/Dec/2024 01:58:52] "[31m[1mDELETE /reviews/delete/1 HTTP/1.1[0m" 403 -
+2024-12-05 02:24:45,007 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:6000
+2024-12-05 02:24:45,007 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-05 02:24:45,268 - INFO - {'endpoint': '/sales', 'method': 'POST', 'username': 'testuser', 'status': 400, 'data': {'error': 'Insufficient wallet balance.'}}
+2024-12-05 02:24:45,269 - INFO - 127.0.0.1 - - [05/Dec/2024 02:24:45] "[31m[1mPOST /sales HTTP/1.1[0m" 400 -
+2024-12-05 02:24:45,283 - INFO - {'endpoint': '/sales/history/testuser', 'method': 'GET', 'username': 'testuser', 'status': 404, 'data': {'error': 'No sales found.'}}
+2024-12-05 02:24:45,283 - INFO - 127.0.0.1 - - [05/Dec/2024 02:24:45] "[33mGET /sales/history/testuser HTTP/1.1[0m" 404 -
+2024-12-05 02:24:45,294 - INFO - {'endpoint': '/sales/products', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 02:24:45,294 - INFO - 127.0.0.1 - - [05/Dec/2024 02:24:45] "GET /sales/products HTTP/1.1" 200 -
+2024-12-05 02:24:45,306 - INFO - {'endpoint': '/sales/products/TestDuplicateProduct', 'method': 'GET', 'username': None, 'status': 200, 'data': None}
+2024-12-05 02:24:45,306 - INFO - 127.0.0.1 - - [05/Dec/2024 02:24:45] "GET /sales/products/TestDuplicateProduct HTTP/1.1" 200 -
