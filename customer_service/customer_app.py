@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from db_config import db, init_db
 from werkzeug.security import generate_password_hash, check_password_hash
 import logging
-import datetime
 
 app = Flask(__name__)
 init_db(app)
@@ -31,9 +30,7 @@ def log_operation(endpoint, method, username=None, status=None, data=None):
     :param data: Additional data to log (optional)
     :type data: dict
     """
-    timestamp = datetime.utcnow().isoformat()  # Explicit timestamp
     log_entry = {
-        "timestamp": timestamp,
         "endpoint": endpoint,
         "method": method,
         "username": username,

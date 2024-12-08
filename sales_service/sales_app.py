@@ -1,14 +1,76 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-import datetime
+from datetime import datetime
 from db_config import db, init_db
-from customer_service.customer_app import User
-from inventory_service.inventory_app import Product
 import logging
 
 app = Flask(__name__)
 init_db(app)
 app.config['SECRET_KEY'] = "222222222233333333"
+
+
+class User(db.Model):
+    """
+    Represents a user in the database.
+
+    :param full_name: Full name of the user
+    :type full_name: str
+    :param username: Unique username (acts as primary key)
+    :type username: str
+    :param password: Hashed password of the user
+    :type password: str
+    :param isadmin: Indicates whether the user is an administrator (default: False)
+    :type isadmin: bool
+    :param age: Age of the user
+    :type age: int
+    :param address: Address of the user
+    :type address: str
+    :param gender: Gender of the user
+    :type gender: str
+    :param marital_status: Marital status of the user
+    :type marital_status: str
+    :param wallet_balance: Wallet balance of the user (default: 0.0)
+    :type wallet_balance: float
+    """
+    __tablename__ = 'User'
+    full_name = db.Column(db.String(100), nullable=False)
+    username = db.Column(db.String(50), primary_key=True, nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+    isadmin = db.Column(db.Boolean, default=False)
+    age = db.Column(db.Integer, nullable=False)
+    address = db.Column(db.String(200), nullable=False)
+    gender = db.Column(db.String(10), nullable=False)
+    marital_status = db.Column(db.String(10), nullable=False)
+    wallet_balance = db.Column(db.Float, default=0.0)
+
+
+class Product(db.Model):
+    """
+    Represents a product in the inventory system.
+
+    :param name: Name of the product (primary key)
+    :type name: str
+    :param description: Description of the product
+    :type description: str
+    :param category: Category of the product
+    :type category: str
+    :param price: Price of the product
+    :type price: float
+    :param stock: Stock quantity of the product (default: 0)
+    :type stock: int
+    :param created_at: Timestamp of product creation (default: current UTC time)
+    :type created_at: datetime
+    :param updated_at: Timestamp of last product update (default: current UTC time, auto-updates on modification)
+    :type updated_at: datetime
+    """
+    __tablename__ = 'Product'
+    name = db.Column(db.String(100), primary_key=True)
+    description = db.Column(db.String(500))
+    category = db.Column(db.String(50), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    stock = db.Column(db.Integer, default=0)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 
 
@@ -66,7 +128,7 @@ class Sale(db.Model):
     product_name = db.Column(db.String(120), db.ForeignKey('Product.name'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     total_price = db.Column(db.Float, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
 @app.route('/sales', methods=['POST'])
 def make_sale():
