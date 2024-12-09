@@ -6,6 +6,8 @@ from db_config import db, init_db
 from werkzeug.security import generate_password_hash, check_password_hash
 from functools import wraps
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+# from inventory_service.inventory_app import Product
+# from customer_service.customer_app import User
 import logging
 app = Flask(__name__)
 init_db(app)
@@ -37,6 +39,7 @@ class User(db.Model):
     :type wallet_balance: float
     """
     __tablename__ = 'User'
+    __table_args__ = {'extend_existing': True}
     full_name = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(50), primary_key=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
@@ -68,6 +71,7 @@ class Product(db.Model):
     :type updated_at: datetime
     """
     __tablename__ = 'Product'
+    __table_args__ = {'extend_existing': True}
     name = db.Column(db.String(100), primary_key=True)
     description = db.Column(db.String(500))
     category = db.Column(db.String(50), nullable=False)

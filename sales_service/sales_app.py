@@ -33,6 +33,7 @@ class User(db.Model):
     :type wallet_balance: float
     """
     __tablename__ = 'User'
+    __table_args__ = {'extend_existing': True}
     full_name = db.Column(db.String(100), nullable=False)
     username = db.Column(db.String(50), primary_key=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
@@ -64,6 +65,7 @@ class Product(db.Model):
     :type updated_at: datetime
     """
     __tablename__ = 'Product'
+    __table_args__ = {'extend_existing': True}
     name = db.Column(db.String(100), primary_key=True)
     description = db.Column(db.String(500))
     category = db.Column(db.String(50), nullable=False)
